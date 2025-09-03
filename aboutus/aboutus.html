@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Strona internetowa firmy TechGast">
+    <meta name="keywords" content="Kuchnie, wyposażenie gastronomii">
+    <meta name="author" content="Łukasz Bolanowski">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <title>TechGast - profesjonalne wyposażenie gastronomii</title>
+</head>
+<body>
+    <header class="hero" id="header">
+        <button class="hamburger">
+            <span class="hamburger__container">
+                <span class="hamburger__bars"></span>
+            </span>
+        </button>
+        <aside>
+            <a href="#header"><span class="logo"><img src="images/TGLogo.jpg" class="logo-mobile" alt="NewPrompt" decoding="async"></span></a>
+            <nav class="mobile navigation">
+                <ul class="menu">
+                    <li class="menu__item"><a href="../index.html">Start</a></li>
+                    <li class="menu__item"><a href="../offer/offer.html">Oferta</a></li>
+                    <li class="menu__item"><a href="../aboutus/aboutus.html">O nas</a></li>
+                    <li class="menu__item"><a href="../contact/contact.html">Kontakt</a></li>
+                    <li class="menu__item-dialer"><a href="tel:+48733897076">Zadzwoń teraz</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <nav class="desktop navigation">
+            <a href="#header"><span class="logo"></span><img src="images/TGLogo.jpg" class="logo-desktop" alt="NewPrompt" decoding="async"></span></a>
+            <ul class="menu">
+                <li class="menu__item"><a href="../index.html">Start</a></li>
+                <li class="menu__item"><a href="../offer/offer.html">Oferta</a></li>
+                <li class="menu__item"><a href="../aboutus/aboutus.html">O nas</a></li>
+                <li class="menu__item"><a href="../contact/contact.html">Kontakt</a></li>
+                <li class="menu__item-dialer"><a href="tel:+48733897076">Zadzwoń teraz</a></li>
+            </ul>
+        </nav>
+        <article class="hero__info">
+            <div class="hero__title">
+                <h1 class="hero__title-h1"><span class="hilight">Wyposażenie, które pracuje na Twój sukces</span></h1>
+                <p class="hero__title-p">Dostarczamy profesjonalny sprzęt i akcesoria dla gastronomii - od kuchni po salę obsługi. Stawiamy na jakość i rozwiązania dopasowane do potrzeb każdego lokalu</p>
+            </div>
+            <div class="hero__photo">
+            </div>
+        </article>
+    </header>
+    <footer class="footer">
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__wrapper-info">
+                <div class="footer__adress">
+                    <h3 class="footer__adress-header">Nasz adres</h3>
+                    <p class="footer__adress-details">ul. Piłsudskiego 17, 38-480, Rymanów</p>
+                </div>
+                <div class="footer__contact">
+                    <h3 class="footer__contact-header">Napisz do nas</h3>
+                    <p class="footer__contact-details">Wasz adres e-mail</p>
+                </div>
+                <div class="footer__rodo">
+                    <h3 class="footer__rodo-header">Polityka prywatności</h3>
+                    <a href="files/regulaminnewprompt.pdf" target="_blank" class="footer__rodo-pdf">Otwórz plik PDF</a>
+                </div>
+            </div>
+            <nav class="footer__navigation">
+                <ul class="menu">
+                    <li class="menu__item"><a href="../index.html">Start</a></li>
+                    <li class="menu__item"><a href="../offer/offer.html">Oferta</a></li>
+                    <li class="menu__item"><a href="../aboutus/aboutus.html">O nas</a></li>
+                    <li class="menu__item"><a href="../contact/contact.html">Kontakt</a></li>
+                    <li class="menu__item-dialer"><a href="tel:+48733897076">Zadzwoń teraz</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__author">
+            <div class="footer__logo"><img src="images/TGLogo.jpg" alt="Logo NewPrompt"></div>
+            <p class="footer__details">&copy; TechGast wszelkie prawa zastrzeżone</p>
+            <p class="footer__details">Built by &copy; NewPrompt Sp. z.o.o.</p>
+            <p class="footer__details">Formularze obsługuje FormSubmit</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="hamburgerMenu.js"></script>
+    <script src="scrollTrigger.js"></script>
+    <script src="menu.js"></script>
+    <script src="activeOption.js"></script>
+</body>
+</html>

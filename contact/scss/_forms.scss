@@ -1,0 +1,131 @@
+$headerFont: 'Roboto Condensed', sans-serif;
+$textFont: 'Lato', sans-serif;
+$darkColor: rgb(27, 35, 46);
+$formColor: rgb(51, 70, 96);
+$hoverForm: rgb(70, 94, 127);
+$lightColor: rgb(0, 183, 194);
+$inputBackground: rgb(245, 247, 250);
+$headerColor: #d00;
+$white: #fff;
+
+@mixin respond ($breakpoint) {
+    @if ($breakpoint == tablet) {
+        @media (min-width: 768px) {@content;}
+    }
+    @else if $breakpoint == desktop {
+        @media (min-width: 1024px) {@content;}
+    }
+    @else if ($breakpoint == desktop-landscape) {
+        @media (min-width: 1024px) and (orientation: landscape) {@content;}
+    }
+    @else if ($breakpoint == menu-landscape) {
+        @media (min-width: 667px) and (orientation: landscape) {@content;}
+    }
+}
+
+.forms {
+    background-color: $formColor;
+    padding: 25px 0;
+
+    @include respond(desktop) {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__questions {
+        width: 90%;
+        margin: 0 auto;
+        color: $white;
+
+        @include respond(desktop) {
+            width: 35%;
+            margin: 60px 5px 0 0;
+        }
+
+        @include respond(desktop-landscape) {
+            max-width: 700px;
+        }
+
+        &-title {
+            font-size: clamp(2rem, 4.5vw, 3.4rem);
+            text-align: center;
+            color: $headerColor;
+        }
+
+        &-text {
+            font-size: clamp(1.5rem, 1.1vw, 1.7rem);
+            margin: 15px 0;
+        }
+    }
+
+    &__box {
+        width: 90%;
+        padding: 20px;
+        margin: 20px auto;;
+        background-color: $darkColor;
+        color: $white;
+        border-radius: 10px;
+
+        @include respond(tablet) {
+            width: 70%;
+        }
+
+        @include respond(desktop) {
+            width: 35%;
+            margin: 5px;
+        }
+
+        @include respond(desktop-landscape) {
+            max-width: 700px;
+        }
+
+        &-info {
+            text-align: center;
+            margin-bottom: 15px;
+            color: $white;
+            font-size: clamp(2rem, 3.7vw, 2.7rem);
+        }
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+        & input,
+        & textarea {
+            padding: 7px;
+            margin: 5px;
+            border-radius: 10px;
+            background-color: $inputBackground;
+            font-size: clamp(1.5rem, 1.1vw, 1.7rem);
+        }
+
+        & label {
+            font-size: clamp(1.5rem, 1.1vw, 1.7rem);
+        }
+
+        & textarea {
+            height: 100px;
+            resize: none;
+        }
+    }
+
+    &__submitform {
+        width: 100%;
+        padding: 10px;
+        font-size: clamp(1.5rem, 1.1vw, 1.7rem);
+        border-radius: 10px;
+        background-color: $formColor;
+        color: $white;
+        transition: background-color .3s ease;
+
+        @include respond(desktop) {
+            cursor: pointer;
+        }
+
+        &:hover {
+            background-color: $hoverForm;
+        }
+    }
+}

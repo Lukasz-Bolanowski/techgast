@@ -1,0 +1,103 @@
+$headerFont: 'Roboto Condensed', sans-serif;
+$textFont: 'Lato', sans-serif;
+$headerFontSIze: clamp(1.3rem, 4vw, 4.3rem);
+$textFontSize: clamp(1.3rem, 1.1vw, 2.7rem);
+$darkColor: rgb(27, 35, 46);
+$accordionActive: rgb(51, 70, 96);
+$lightColor: rgb(0, 183, 194);
+$headerColor: #d00;
+$white: #fff;
+
+@mixin respond ($breakpoint) {
+    @if ($breakpoint == tablet) {
+        @media (min-width: 768px) {@content;}
+    }
+    @else if $breakpoint == desktop {
+        @media (min-width: 1024px) {@content;}
+    }
+    @else if ($breakpoint == desktop-landscape) {
+        @media (min-width: 1024px) and (orientation: landscape) {@content;}
+    }
+    @else if ($breakpoint == menu-landscape) {
+        @media (min-width: 667px) and (orientation: landscape) {@content;}
+    }
+}
+
+.accordion {
+    margin: 0 auto;
+    position: relative;
+
+    &__title {
+        font-size: $headerFontSIze;
+        text-transform: uppercase;
+        text-align: center;
+        color: $headerColor;
+        margin: 15px;
+    }
+
+    &__item {
+        margin-bottom: 15px;
+        width: 90%;
+        margin: 0 auto;
+
+        @include respond(tablet) {
+            width: 70%;
+        }
+
+        @include respond(desktop-landscape) {
+            max-width: 1600px;
+        }
+
+        &-title {
+            font-size: clamp(1.8rem, 2.2vw, 2.2rem);
+            background-color: $darkColor;
+            padding: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            color: #fff;
+            user-select: none;
+            transition: background-color .3s ease;
+
+            & .fa-plus,
+            & .fa-minus {
+                margin-right: 15px;
+            }
+
+            & .fa-plus {
+                color: $headerColor;
+            }
+        }
+
+        &-text {
+            font-size: $textFontSize;
+            padding: 10px;
+
+            & .fa-check {
+                color: #0d0;
+                font-size: $textFontSize;
+                margin-right: 5px;
+            }
+        }
+
+        &-content {
+            max-height: 0;
+            overflow: hidden;
+            margin: 15px;
+            transition: max-height .3s ease;
+        }
+    }
+
+    & .active .accordion__item-title {
+        background-color: $accordionActive;
+    }
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0; transform: translateY(-10px)}
+    100% {opacity: 100%; transform: translateY(0)}
+}
+
+article.active .content-text {
+    display: block;
+    animation: fadeIn .3s ease;
+}

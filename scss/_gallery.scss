@@ -1,0 +1,161 @@
+$headerFont: 'Roboto Condensed', sans-serif;
+$textFont: 'Lato', sans-serif;
+$headerFontSIze: clamp(1.3rem, 4vw, 4.3rem);
+$textFontSize: clamp(1.3rem, 1.1vw, 2.7rem);
+$menuFontSize: clamp(1.7rem, 1.4vw, 2rem);
+$darkColor: rgb(27, 35, 46);
+$stickyMenu: rgba(27, 35, 46, 0.85);
+$lightColor: rgb(0, 183, 194);
+$headerColor: #d00;
+$white: #fff;
+
+@mixin respond ($breakpoint) {
+    @if ($breakpoint == tablet) {
+        @media (min-width: 768px) {@content;}
+    }
+    @if ($breakpoint == tablet-landscape) {
+        @media (min-width: 720px) and (orientation: landscape) {@content;}
+    }
+    @else if $breakpoint == desktop {
+        @media (min-width: 1024px) {@content;}
+    }
+    @else if ($breakpoint == desktop-landscape) {
+        @media (min-width: 1024px) and (orientation: landscape) {@content;}
+    }
+    @else if ($breakpoint == menu-landscape) {
+        @media (min-width: 667px) and (orientation: landscape) {@content;}
+    }
+}
+
+.gallery {
+    width: 100%;
+    margin: 0 auto;
+
+    &__title {
+        font-size: $headerFontSIze;
+        color: $headerColor;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 15px;
+    }
+
+    &__item {
+        margin-top: 15px;
+
+        @include respond(tablet) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin: 0;
+        }
+
+        @include respond(tablet-landscape) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin: 0;
+        }
+
+        @include respond(desktop-landscape) {
+            max-width: 2200px;
+            margin: 0 auto;
+        }
+
+        &-photo {
+            height: 50vh;
+            background-image: url("../images/headerimg.png");
+            background-size: cover;
+
+            @include respond(tablet) {
+                grid-column: 1/2;
+                height: 65vh;
+            }
+
+            @include respond(tablet-landscape) {
+                grid-column: 1/2;
+                height: 65vh;
+            }
+
+            &-right {
+                height: 50vh;
+                background-image: url("../images/headerimg.png");
+                background-size: cover;
+
+                @include respond(tablet) {
+                    grid-column: 2/3;
+                    height: 65vh;
+                }
+
+                @include respond(tablet-landscape) {
+                    grid-column: 2/3;
+                    height: 65vh;
+                }
+            }
+        }
+
+        &-text {
+            padding: 20px;
+            background-color: #f2f2f2;
+
+            @include respond(tablet) {
+                grid-column: 2/3;
+                grid-row: 1;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            @include respond(tablet-landscape) {
+                grid-column: 2/3;
+                grid-row: 1;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            &-right {
+                padding: 20px;
+                background-color: #f2f2f2;
+
+                & h2 {
+                    font-size: $headerFontSIze;
+                    color: $headerColor
+                }
+
+                & p {
+                    font-size: $textFontSize;
+                    margin-top: 15px;
+                }
+
+                @include respond(tablet) {
+                    grid-column: 1/2;
+                    grid-row: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    flex-direction: column;
+                }
+
+                @include respond(tablet-landscape) {
+                    grid-column: 1/2;
+                    grid-row: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    flex-direction: column;
+                }
+            }
+
+            & h2 {
+                font-size: $headerFontSIze;
+                color: $headerColor;
+            }
+
+            & p {
+                font-size: $textFontSize;
+                margin-top: 15px;
+            }
+        }
+    }
+
+}

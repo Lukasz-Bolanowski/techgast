@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Strona internetowa firmy TechGast">
+    <meta name="keywords" content="Kuchnie, wyposażenie gastronomii">
+    <meta name="author" content="Łukasz Bolanowski">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <title>TechGast - profesjonalne wyposażenie gastronomii</title>
+</head>
+<body>
+    <header class="hero" id="header">
+        <button class="hamburger">
+            <span class="hamburger__container">
+                <span class="hamburger__bars"></span>
+            </span>
+        </button>
+        <aside>
+            <a href="#header"><span class="logo"><img src="images/TGLogo.jpg" class="logo-mobile" alt="NewPrompt" decoding="async"></span></a>
+            <nav class="mobile navigation">
+                <ul class="menu">
+                    <li class="menu__item"><a href="../index.html">Start</a></li>
+                    <li class="menu__item"><a href="../offer/offer.html">Oferta</a></li>
+                    <li class="menu__item"><a href="../aboutus/aboutus.html">O nas</a></li>
+                    <li class="menu__item"><a href="../contact/contact.html">Kontakt</a></li>
+                    <li class="menu__item-dialer"><a href="tel:+48733897076">Zadzwoń teraz</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <nav class="desktop navigation">
+            <a href="#header"><span class="logo"></span><img src="images/TGLogo.jpg" class="logo-desktop" alt="NewPrompt" decoding="async"></span></a>
+            <ul class="menu">
+                <li class="menu__item"><a href="../index.html">Start</a></li>
+                <li class="menu__item"><a href="../offer/offer.html">Oferta</a></li>
+                <li class="menu__item"><a href="../aboutus/aboutus.html">O nas</a></li>
+                <li class="menu__item"><a href="../contact/contact.html">Kontakt</a></li>
+                <li class="menu__item-dialer"><a href="tel:+48733897076">Zadzwoń teraz</a></li>
+            </ul>
+        </nav>
+        <article class="hero__info">
+            <div class="hero__title">
+                <h1 class="hero__title-h1"><span class="hilight">Poznaj lepiej nasz zespół, aby porozmawiać o Twoim biznesie</span></h1>
+                <p class="hero__title-p">Nasi doradcy pomogą Ci wybrać sprzęt idealny do Twojej działalności. Zadzwoń, napisz lub odwiedź nas - jesteśmy do Twojej dyspozycji.</p>
+            </div>
+            <div class="hero__photo">
+            </div>
+        </article>
+    </header>
+    <section class="contact">
+        <article class="contact__person">
+            <div class="contact__person-photo">
+                <img src="images/person.png" alt="Zdjęcie osoby">
+            </div>
+            <div class="contact__person-text">
+                <h1>Imię i nazwisko</h1>
+                <h2>Numer telefonu</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio beatae dolorum aperiam vel veniam in, ipsum rerum quia nulla a deleniti quasi consequatur libero illum eaque sapiente ratione ullam laboriosam! Quas, vel nobis unde maiores asperiores sapiente voluptate mollitia quasi. Adipisci qui, doloremque neque voluptas iusto culpa laudantium voluptatem sunt?</p>
+            </div>
+        </article>
+        <article class="contact__person">
+            <div class="contact__person-photo">
+                <img src="images/person.png" alt="Zdjęcie osoby">
+            </div>
+            <div class="contact__person-text">
+                <h1>Imię i nazwisko</h1>
+                <h2>Numer telefonu</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio beatae dolorum aperiam vel veniam in, ipsum rerum quia nulla a deleniti quasi consequatur libero illum eaque sapiente ratione ullam laboriosam! Quas, vel nobis unde maiores asperiores sapiente voluptate mollitia quasi. Adipisci qui, doloremque neque voluptas iusto culpa laudantium voluptatem sunt?</p>
+            </div>
+        </article>
+        <article class="contact__person">
+            <div class="contact__person-photo">
+                <img src="images/person.png" alt="Zdjęcie osoby">
+            </div>
+            <div class="contact__person-text">
+                <h1>Imię i nazwisko</h1>
+                <h2>Numer telefonu</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio beatae dolorum aperiam vel veniam in, ipsum rerum quia nulla a deleniti quasi consequatur libero illum eaque sapiente ratione ullam laboriosam! Quas, vel nobis unde maiores asperiores sapiente voluptate mollitia quasi. Adipisci qui, doloremque neque voluptas iusto culpa laudantium voluptatem sunt?</p>
+            </div>
+        </article>
+        <article class="contact__person">
+            <div class="contact__person-photo">
+                <img src="images/person.png" alt="Zdjęcie osoby">
+            </div>
+            <div class="contact__person-text">
+                <h1>Imię i nazwisko</h1>
+                <h2>Numer telefonu</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio beatae dolorum aperiam vel veniam in, ipsum rerum quia nulla a deleniti quasi consequatur libero illum eaque sapiente ratione ullam laboriosam! Quas, vel nobis unde maiores asperiores sapiente voluptate mollitia quasi. Adipisci qui, doloremque neque voluptas iusto culpa laudantium voluptatem sunt?</p>
+            </div>
+        </article>
+    </section>
+    <section class="forms" id="section-contact">
+        <article class="forms__questions">
+            <h2 class="forms__questions-title">Masz pytania lub chcesz zlecić naprawę sprzętu?</h2>
+            <p class="forms__questions-text">Napisz do nas wiadomość</p>
+            <p class="forms__questions-text">Udzielimy odpowiedzi na podany adres e-mail w najbliższym czasie</p>
+            <p class="forms__questions-text">W przypadku zlecenia naprawy sprzętu podaj również swój numer telefonu. Oddzwonimy w celu ustalenia szczegółow</p>
+        </article>
+        <form class="forms__box" action="https://formsubmit.co/kontakt@newpromptai.pl" enctype="multipart/form-data" method="POST">
+            <h3 class="forms__box-info">Formularz kontaktowy</h3>
+            <input name="_captcha" type="hidden"value="false">
+            <input name="_subject" type="hidden" value="Wycena wydruku">
+            <div class="forms__group">
+                <label for="firstName">Twoje imię</label>
+                <input name="Firstname" id="firstName" type="name" required>
+            </div>
+            <div class="forms__group">
+                <label for="surName">Twoje nazwisko</label>
+                <input name="Surname" id="surName" type="text" required>
+            </div> 
+            <div class="forms__group">
+                <label for="email">Adres e-mail</label>
+                <input name="email" id="email" type="email" required>
+            </div>
+            <div class="forms__group">
+                <label for="attachment">Załącz plik (jeśli potrzeba)</label>
+                <input name="attachment" id="attachment" type="file">
+            </div>
+            <div class="forms__group">
+                <label for="attachment">Napisz wiadomość</label>
+                <textarea name="textContent" id="textContent"></textarea>
+            </div>
+            <button class="forms__submitform" type="submit">Wyślij</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__wrapper-info">
+                <div class="footer__adress">
+                    <h3 class="footer__adress-header">Nasz adres</h3>
+                    <p class="footer__adress-details">ul. Piłsudskiego 17, 38-480, Rymanów</p>
+                </div>
+                <div class="footer__contact">
+                    <h3 class="footer__contact-header">Napisz do nas</h3>
+                    <p class="footer__contact-details">Wasz adres e-mail</p>
+                </div>
+                <div class="footer__rodo">
+                    <h3 class="footer__rodo-header">Polityka prywatności</h3>
+                    <a href="files/regulaminnewprompt.pdf" target="_blank" class="footer__rodo-pdf">Otwórz plik PDF</a>
+                </div>
+            </div>
+            <nav class="footer__navigation">
+                <ul class="menu">
+                    <li class="menu__item"><a href="../index.html">Start</a></li>
+                    <li class="menu__item"><a href="../offer/offer.html">Oferta</a></li>
+                    <li class="menu__item"><a href="../aboutus/aboutus.html">O nas</a></li>
+                    <li class="menu__item"><a href="../contact/contact.html">Kontakt</a></li>
+                    <li class="menu__item-dialer"><a href="tel:+48733897076">Zadzwoń teraz</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__author">
+            <div class="footer__logo"><img src="images/TGLogo.jpg" alt="Logo NewPrompt"></div>
+            <p class="footer__details">&copy; TechGast wszelkie prawa zastrzeżone</p>
+            <p class="footer__details">Built by &copy; NewPrompt Sp. z.o.o.</p>
+            <p class="footer__details">Formularze obsługuje FormSubmit</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="hamburgerMenu.js"></script>
+    <script src="scrollTrigger.js"></script>
+    <script src="menu.js"></script>
+    <script src="activeOption.js"></script>
+</body>
+</html>
