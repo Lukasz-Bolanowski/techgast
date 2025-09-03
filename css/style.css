@@ -131,11 +131,16 @@ html {
   }
 }
 .hero__title-h1 {
-  font-size: clamp(1.3rem, 4vw, 4.3rem);
+  font-size: clamp(1.9rem, 4vw, 3.8rem);
   color: #fff;
 }
 .hero__title-h1 .hilight {
   color: #d00;
+}
+@media (min-width: 1920px) and (orientation: landscape) {
+  .hero__title-h1 {
+    font-size: clamp(1.9rem, 4vw, 4.5rem);
+  }
 }
 .hero__title-p {
   font-size: clamp(1.3rem, 1.1vw, 2.7rem);
@@ -323,12 +328,17 @@ aside .logo .logo-mobile {
   margin-bottom: 20px;
 }
 .intro__title {
-  font-size: clamp(1.3rem, 4vw, 4.3rem);
+  font-size: clamp(1.9rem, 4vw, 3.8rem);
   text-transform: uppercase;
   text-align: center;
   color: #d00;
   margin: 15px auto;
   width: 80%;
+}
+@media (min-width: 1920px) and (orientation: landscape) {
+  .intro__title {
+    font-size: clamp(1.9rem, 4vw, 4.5rem);
+  }
 }
 .intro__item {
   margin-bottom: 40px;
@@ -422,7 +432,12 @@ aside .logo .logo-mobile {
   }
 }
 .intro__info-title {
-  font-size: clamp(1.3rem, 4vw, 4.3rem);
+  font-size: clamp(1.9rem, 4vw, 3.8rem);
+}
+@media (min-width: 1920px) and (orientation: landscape) {
+  .intro__info-title {
+    font-size: clamp(1.9rem, 4vw, 4.5rem);
+  }
 }
 .intro__info-text {
   font-size: clamp(1.3rem, 1.1vw, 2.7rem);
@@ -434,11 +449,16 @@ aside .logo .logo-mobile {
   margin: 0 auto;
 }
 .gallery__title {
-  font-size: clamp(1.3rem, 4vw, 4.3rem);
+  font-size: clamp(1.9rem, 4vw, 3.8rem);
   color: #d00;
   text-transform: uppercase;
   text-align: center;
   margin: 15px;
+}
+@media (min-width: 1920px) and (orientation: landscape) {
+  .gallery__title {
+    font-size: clamp(1.9rem, 4vw, 4.5rem);
+  }
 }
 .gallery__item {
   margin-top: 15px;
@@ -544,8 +564,13 @@ aside .logo .logo-mobile {
   background-color: #f2f2f2;
 }
 .gallery__item-text-right h2 {
-  font-size: clamp(1.3rem, 4vw, 4.3rem);
+  font-size: clamp(1.9rem, 4vw, 3.8rem);
   color: #d00;
+}
+@media (min-width: 1920px) and (orientation: landscape) {
+  .gallery__item-text-right h2 {
+    font-size: clamp(1.9rem, 4vw, 4.5rem);
+  }
 }
 .gallery__item-text-right p {
   font-size: clamp(1.3rem, 1.1vw, 2.7rem);
@@ -590,8 +615,13 @@ aside .logo .logo-mobile {
   }
 }
 .gallery__item-text h2 {
-  font-size: clamp(1.3rem, 4vw, 4.3rem);
+  font-size: clamp(1.9rem, 4vw, 3.8rem);
   color: #d00;
+}
+@media (min-width: 1920px) and (orientation: landscape) {
+  .gallery__item-text h2 {
+    font-size: clamp(1.9rem, 4vw, 4.5rem);
+  }
 }
 .gallery__item-text p {
   font-size: clamp(1.3rem, 1.1vw, 2.7rem);
@@ -603,11 +633,16 @@ aside .logo .logo-mobile {
   position: relative;
 }
 .accordion__title {
-  font-size: clamp(1.3rem, 4vw, 4.3rem);
+  font-size: clamp(1.9rem, 4vw, 3.8rem);
   text-transform: uppercase;
   text-align: center;
   color: #d00;
   margin: 15px;
+}
+@media (min-width: 1920px) and (orientation: landscape) {
+  .accordion__title {
+    font-size: clamp(1.9rem, 4vw, 4.5rem);
+  }
 }
 .accordion__item {
   margin-bottom: 15px;
@@ -712,10 +747,15 @@ article.active .content-text {
           flex-direction: column;
 }
 .map__title {
-  font-size: clamp(2.5rem, 4.8vw, 4rem);
+  font-size: clamp(1.9rem, 4vw, 3.8rem);
   text-transform: uppercase;
   color: #d00;
   margin: 15px auto;
+}
+@media (min-width: 1920px) and (orientation: landscape) {
+  .map__title {
+    font-size: clamp(1.9rem, 4vw, 4.5rem);
+  }
 }
 .map__container {
   height: 40vh;
@@ -758,12 +798,6 @@ article.active .content-text {
   .footer__wrapper {
     width: 90%;
     margin: 0 auto;
-  }
-}
-@media (min-width: 1366px) and (orientation: landscape) {
-  .footer__wrapper {
-    width: 75%;
-    max-width: 1600px;
   }
 }
 .footer__wrapper__adress, .footer__wrapper__contact, .footer__wrapper__rodo {

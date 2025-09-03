@@ -131,8 +131,13 @@ html {
   }
 }
 .hero__title-h1 {
-  font-size: clamp(1.3rem, 4vw, 4.3rem);
+  font-size: clamp(1.9rem, 4vw, 3.8rem);
   color: #fff;
+}
+@media (min-width: 1920px) and (orientation: landscape) {
+  .hero__title-h1 {
+    font-size: clamp(1.9rem, 4vw, 4.5rem);
+  }
 }
 .hero__title-h1 .hilight {
   color: #d00;
@@ -346,7 +351,7 @@ aside .logo .logo-mobile {
     margin: 0 auto;
   }
 }
-@media (min-width: 1366px) and (orientation: landscape) {
+@media (min-width: 1920px) and (orientation: landscape) {
   .footer__wrapper {
     width: 75%;
     max-width: 1600px;

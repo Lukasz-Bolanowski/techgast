@@ -1,9 +1,11 @@
 $headerFont: 'Roboto Condensed', sans-serif;
 $textFont: 'Lato', sans-serif;
+$headerFontSize: clamp(1.9rem, 4vw, 3.8rem);
+$headerFontSizeWide: clamp(1.9rem, 4vw, 4.5rem);
+$textFontSize: clamp(1.5rem, 1.1vw, 1.7rem);
 $darkColor: rgb(27, 35, 46);
 $formColor: rgb(51, 70, 96);
 $hoverForm: rgb(70, 94, 127);
-$lightColor: rgb(0, 183, 194);
 $inputBackground: rgb(245, 247, 250);
 $headerColor: #d00;
 $white: #fff;
@@ -17,6 +19,9 @@ $white: #fff;
     }
     @else if ($breakpoint == desktop-landscape) {
         @media (min-width: 1024px) and (orientation: landscape) {@content;}
+    }
+    @else if ($breakpoint == desktop-wide) {
+        @media (min-width: 1920px) and (orientation: landscape) {@content;}
     }
     @else if ($breakpoint == menu-landscape) {
         @media (min-width: 667px) and (orientation: landscape) {@content;}
@@ -47,13 +52,17 @@ $white: #fff;
         }
 
         &-title {
-            font-size: clamp(2rem, 4.5vw, 3.4rem);
+            font-size: $headerFontSize;
             text-align: center;
             color: $headerColor;
+
+            @include respond(desktop-wide) {
+                font-size: $headerFontSizeWide;
+            }
         }
 
         &-text {
-            font-size: clamp(1.5rem, 1.1vw, 1.7rem);
+            font-size: $textFontSize;
             margin: 15px 0;
         }
     }
@@ -83,7 +92,7 @@ $white: #fff;
             text-align: center;
             margin-bottom: 15px;
             color: $white;
-            font-size: clamp(2rem, 3.7vw, 2.7rem);
+            font-size: $textFontSize;
         }
     }
 
@@ -98,11 +107,11 @@ $white: #fff;
             margin: 5px;
             border-radius: 10px;
             background-color: $inputBackground;
-            font-size: clamp(1.5rem, 1.1vw, 1.7rem);
+            font-size: $textFontSize;
         }
 
         & label {
-            font-size: clamp(1.5rem, 1.1vw, 1.7rem);
+            font-size: $textFontSize;
         }
 
         & textarea {
@@ -114,7 +123,7 @@ $white: #fff;
     &__submitform {
         width: 100%;
         padding: 10px;
-        font-size: clamp(1.5rem, 1.1vw, 1.7rem);
+        font-size: $textFontSize;
         border-radius: 10px;
         background-color: $formColor;
         color: $white;

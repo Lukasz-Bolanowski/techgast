@@ -1,3 +1,9 @@
+$headerFont: 'Roboto Condensed', sans-serif;
+$textFont: 'Lato', sans-serif;
+$headerFontSIze: clamp(1.9rem, 4vw, 3.8rem);
+$headerFontSizeWide: clamp(1.9rem, 4vw, 4.5rem);
+$headerColor: #d00;
+
 @mixin respond ($breakpoint) {
     @if ($breakpoint == tablet) {
         @media (min-width: 768px) {@content;}
@@ -7,6 +13,9 @@
     }
     @else if ($breakpoint == desktop-landscape) {
         @media (min-width: 1024px) and (orientation: landscape) {@content;}
+    }
+    @else if ($breakpoint == desktop-wide) {
+        @media (min-width: 1920px) and (orientation: landscape) {@content;}
     }
     @else if ($breakpoint == menu-landscape) {
         @media (min-width: 667px) and (orientation: landscape) {@content;}
@@ -21,10 +30,14 @@
     flex-direction: column;
 
     &__title {
-        font-size: clamp(2.5rem, 4.8vw, 4rem);
+        font-size: $headerFontSIze;
         text-transform: uppercase;
-        color: #d00;
+        color: $headerColor;
         margin: 15px auto;
+
+        @include respond(desktop-wide) {
+            font-size: $headerFontSizeWide;
+        }
     }
 
     &__container {
