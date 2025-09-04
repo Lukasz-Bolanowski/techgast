@@ -355,11 +355,11 @@ aside .logo .logo-mobile {
           align-items: center;
 }
 .contact__person-photo img {
-  width: 70%;
+  width: 60%;
 }
 @media (min-width: 768px) {
   .contact__person-photo img {
-    width: 50%;
+    width: 35%;
   }
 }
 @media (min-width: 720px) and (orientation: landscape) {

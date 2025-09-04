@@ -65,6 +65,10 @@ $textFontSize: clamp(1.6rem, 1.1vw, 2.7rem);
             & .intro-img-right {
                 width: 40%;
 
+                @include respond(tablet) {
+                    width: 75%;
+                }
+
                 @include respond(tablet-landscape) {
                     width: 40%;
                 }

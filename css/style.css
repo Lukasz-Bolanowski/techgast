@@ -375,6 +375,11 @@ aside .logo .logo-mobile {
 .intro__item-photo .intro-img, .intro__item-photo .intro-img-right {
   width: 40%;
 }
+@media (min-width: 768px) {
+  .intro__item-photo .intro-img, .intro__item-photo .intro-img-right {
+    width: 75%;
+  }
+}
 @media (min-width: 720px) and (orientation: landscape) {
   .intro__item-photo .intro-img, .intro__item-photo .intro-img-right {
     width: 40%;

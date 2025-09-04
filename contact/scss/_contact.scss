@@ -53,10 +53,10 @@ $white: #fff;
             align-items: center;
 
             & img {
-                width: 70%;
+                width: 60%;
 
                 @include respond(tablet) {
-                    width: 50%;
+                    width: 35%;
                 }
 
                 @include respond(tablet-landscape) {
