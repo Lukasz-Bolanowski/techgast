@@ -1,8 +1,8 @@
 $headerFont: 'Roboto Condensed', sans-serif;
 $textFont: 'Lato', sans-serif;
-$headerFontSIze: clamp(1.9rem, 4vw, 3.8rem);
-$headerFontSizeWide: clamp(1.9rem, 4vw, 4.5rem);
-$textFontSize: clamp(1.3rem, 1.1vw, 2.7rem);
+$headerFontSize: clamp(2.2rem, 4vw, 3.7rem);
+$headerFontSizeWide: clamp(2.2rem, 4vw, 4.5rem);
+$textFontSize: clamp(1.6rem, 1.1vw, 2.7rem);
 $menuFontSize: clamp(1.7rem, 1.4vw, 2rem);
 $darkColor: rgb(27, 35, 46);
 $stickyMenu: rgba(27, 35, 46, 0.85);
@@ -36,7 +36,7 @@ $white: #fff;
     margin: 0 auto;
 
     &__title {
-        font-size: $headerFontSIze;
+        font-size: $headerFontSize;
         color: $headerColor;
         text-transform: uppercase;
         text-align: center;
@@ -126,7 +126,7 @@ $white: #fff;
                 background-color: #f2f2f2;
 
                 & h2 {
-                    font-size: $headerFontSIze;
+                    font-size: $headerFontSize;
                     color: $headerColor;
 
                     @include respond(desktop-wide) {
@@ -159,7 +159,7 @@ $white: #fff;
             }
 
             & h2 {
-                font-size: $headerFontSIze;
+                font-size: $headerFontSize;
                 color: $headerColor;
 
                 @include respond(desktop-wide) {

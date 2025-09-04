@@ -6,8 +6,12 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 10px;
+}
+
+h1, h2, h3 {
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .hero {
@@ -131,7 +135,7 @@ html {
   }
 }
 .hero__title-h1 {
-  font-size: clamp(1.9rem, 4vw, 3.8rem);
+  font-size: clamp(2.2rem, 4vw, 3.7rem);
   color: #fff;
 }
 .hero__title-h1 .hilight {
@@ -139,11 +143,11 @@ html {
 }
 @media (min-width: 1920px) and (orientation: landscape) {
   .hero__title-h1 {
-    font-size: clamp(1.9rem, 4vw, 4.5rem);
+    font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
 }
 .hero__title-p {
-  font-size: clamp(1.3rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
   margin-top: 35px;
   color: #fff;
 }
@@ -328,7 +332,7 @@ aside .logo .logo-mobile {
   margin-bottom: 20px;
 }
 .intro__title {
-  font-size: clamp(1.9rem, 4vw, 3.8rem);
+  font-size: clamp(2.2rem, 4vw, 3.7rem);
   text-transform: uppercase;
   text-align: center;
   color: #d00;
@@ -337,7 +341,7 @@ aside .logo .logo-mobile {
 }
 @media (min-width: 1920px) and (orientation: landscape) {
   .intro__title {
-    font-size: clamp(1.9rem, 4vw, 4.5rem);
+    font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
 }
 .intro__item {
@@ -432,15 +436,15 @@ aside .logo .logo-mobile {
   }
 }
 .intro__info-title {
-  font-size: clamp(1.9rem, 4vw, 3.8rem);
+  font-size: clamp(2.2rem, 4vw, 3.7rem);
 }
 @media (min-width: 1920px) and (orientation: landscape) {
   .intro__info-title {
-    font-size: clamp(1.9rem, 4vw, 4.5rem);
+    font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
 }
 .intro__info-text {
-  font-size: clamp(1.3rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
   margin-top: 20px;
 }
 
@@ -449,7 +453,7 @@ aside .logo .logo-mobile {
   margin: 0 auto;
 }
 .gallery__title {
-  font-size: clamp(1.9rem, 4vw, 3.8rem);
+  font-size: clamp(2.2rem, 4vw, 3.7rem);
   color: #d00;
   text-transform: uppercase;
   text-align: center;
@@ -457,7 +461,7 @@ aside .logo .logo-mobile {
 }
 @media (min-width: 1920px) and (orientation: landscape) {
   .gallery__title {
-    font-size: clamp(1.9rem, 4vw, 4.5rem);
+    font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
 }
 .gallery__item {
@@ -564,16 +568,16 @@ aside .logo .logo-mobile {
   background-color: #f2f2f2;
 }
 .gallery__item-text-right h2 {
-  font-size: clamp(1.9rem, 4vw, 3.8rem);
+  font-size: clamp(2.2rem, 4vw, 3.7rem);
   color: #d00;
 }
 @media (min-width: 1920px) and (orientation: landscape) {
   .gallery__item-text-right h2 {
-    font-size: clamp(1.9rem, 4vw, 4.5rem);
+    font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
 }
 .gallery__item-text-right p {
-  font-size: clamp(1.3rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
   margin-top: 15px;
 }
 @media (min-width: 768px) {
@@ -615,16 +619,16 @@ aside .logo .logo-mobile {
   }
 }
 .gallery__item-text h2 {
-  font-size: clamp(1.9rem, 4vw, 3.8rem);
+  font-size: clamp(2.2rem, 4vw, 3.7rem);
   color: #d00;
 }
 @media (min-width: 1920px) and (orientation: landscape) {
   .gallery__item-text h2 {
-    font-size: clamp(1.9rem, 4vw, 4.5rem);
+    font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
 }
 .gallery__item-text p {
-  font-size: clamp(1.3rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
   margin-top: 15px;
 }
 
@@ -633,7 +637,7 @@ aside .logo .logo-mobile {
   position: relative;
 }
 .accordion__title {
-  font-size: clamp(1.9rem, 4vw, 3.8rem);
+  font-size: clamp(2.2rem, 4vw, 3.7rem);
   text-transform: uppercase;
   text-align: center;
   color: #d00;
@@ -641,7 +645,7 @@ aside .logo .logo-mobile {
 }
 @media (min-width: 1920px) and (orientation: landscape) {
   .accordion__title {
-    font-size: clamp(1.9rem, 4vw, 4.5rem);
+    font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
 }
 .accordion__item {
@@ -680,12 +684,12 @@ aside .logo .logo-mobile {
   color: #d00;
 }
 .accordion__item-text {
-  font-size: clamp(1.3rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
   padding: 10px;
 }
 .accordion__item-text .fa-check {
   color: #0d0;
-  font-size: clamp(1.3rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
   margin-right: 5px;
 }
 .accordion__item-content {
@@ -747,14 +751,14 @@ article.active .content-text {
           flex-direction: column;
 }
 .map__title {
-  font-size: clamp(1.9rem, 4vw, 3.8rem);
+  font-size: clamp(2.2rem, 4vw, 3.7rem);
   text-transform: uppercase;
   color: #d00;
   margin: 15px auto;
 }
 @media (min-width: 1920px) and (orientation: landscape) {
   .map__title {
-    font-size: clamp(1.9rem, 4vw, 4.5rem);
+    font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
 }
 .map__container {
@@ -813,7 +817,7 @@ article.active .content-text {
   font-size: clamp(1.5rem, 3vw, 2.8rem);
 }
 .footer__adress-details, .footer__contact-details, .footer__rodo-pdf {
-  font-size: clamp(1.3rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
   margin-top: 5px;
 }
 .footer__rodo-pdf {
@@ -881,6 +885,6 @@ article.active .content-text {
           justify-content: center;
 }
 .footer__details {
-  font-size: clamp(1.3rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
   text-align: center;
 }/*# sourceMappingURL=style.css.map */

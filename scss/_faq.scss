@@ -1,8 +1,9 @@
 $headerFont: 'Roboto Condensed', sans-serif;
 $textFont: 'Lato', sans-serif;
-$headerFontSIze: clamp(1.9rem, 4vw, 3.8rem);
-$headerFontSizeWide: clamp(1.9rem, 4vw, 4.5rem);
-$textFontSize: clamp(1.3rem, 1.1vw, 2.7rem);
+$headerFontSize: clamp(2.2rem, 4vw, 3.7rem);
+$headerFontSizeWide: clamp(2.2rem, 4vw, 4.5rem);
+$textFontSize: clamp(1.6rem, 1.1vw, 2.7rem);
+$accordionFontSize: clamp(1.8rem, 2.2vw, 2.2rem);
 $darkColor: rgb(27, 35, 46);
 $accordionActive: rgb(51, 70, 96);
 $lightColor: rgb(0, 183, 194);
@@ -32,7 +33,7 @@ $white: #fff;
     position: relative;
 
     &__title {
-        font-size: $headerFontSIze;
+        font-size: $headerFontSize;
         text-transform: uppercase;
         text-align: center;
         color: $headerColor;
@@ -57,7 +58,7 @@ $white: #fff;
         }
 
         &-title {
-            font-size: clamp(1.8rem, 2.2vw, 2.2rem);
+            font-size: $accordionFontSize;
             background-color: $darkColor;
             padding: 20px;
             cursor: pointer;

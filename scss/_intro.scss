@@ -1,8 +1,8 @@
 $headerFont: 'Roboto Condensed', sans-serif;
 $textFont: 'Lato', sans-serif;
-$headerFontSIze: clamp(1.9rem, 4vw, 3.8rem);
-$headerFontSizeWide: clamp(1.9rem, 4vw, 4.5rem);
-$textFontSize: clamp(1.3rem, 1.1vw, 2.7rem);
+$headerFontSize: clamp(2.2rem, 4vw, 3.7rem);
+$headerFontSizeWide: clamp(2.2rem, 4vw, 4.5rem);
+$textFontSize: clamp(1.6rem, 1.1vw, 2.7rem);
 
 @mixin respond ($breakpoint) {
     @if ($breakpoint == tablet) {
@@ -29,7 +29,7 @@ $textFontSize: clamp(1.3rem, 1.1vw, 2.7rem);
     margin-bottom: 20px;
 
     &__title {
-        font-size: $headerFontSIze;
+        font-size: $headerFontSize;
         text-transform: uppercase;
         text-align: center;
         color: #d00;
@@ -114,7 +114,7 @@ $textFontSize: clamp(1.3rem, 1.1vw, 2.7rem);
         }
 
         &-title {
-            font-size: $headerFontSIze;
+            font-size: $headerFontSize;
 
             @include respond(desktop-wide) {
                 font-size: $headerFontSizeWide;

@@ -1,7 +1,8 @@
 $headerFont: 'Roboto Condensed', sans-serif;
 $textFont: 'Lato', sans-serif;
-$headerFontSIze: clamp(1.3rem, 4vw, 4.3rem);
-$textFontSize: clamp(1.3rem, 1.1vw, 2.7rem);
+$headerFontSize: clamp(2.2rem, 4vw, 3.7rem);
+$headerFontSizeWide: clamp(2.2rem, 4vw, 4.5rem);
+$textFontSize: clamp(1.6rem, 1.1vw, 2.7rem);
 $menuFontSize: clamp(1.7rem, 1.4vw, 2rem);
 $headerColor: #d00;
 
@@ -18,6 +19,9 @@ $headerColor: #d00;
     @else if ($breakpoint == desktop-landscape) {
         @media (min-width: 1024px) and (orientation: landscape) {@content;}
     }
+    @else if ($breakpoint == desktop-wide) {
+        @media (min-width: 1920px) and (orientation: landscape) {@content;}
+    }
     @else if ($breakpoint == menu-landscape) {
         @media (min-width: 667px) and (orientation: landscape) {@content;}
     }
@@ -28,10 +32,14 @@ $headerColor: #d00;
     flex-direction: column;
 
     &__heading {
-        font-size: $headerFontSIze;
+        font-size: $headerFontSize;
         color: $headerColor;
         text-align: center;
         margin-top: 40px;
+
+        @include respond(desktop-wide) {
+            font-size: $headerFontSizeWide;
+        }
     }
 
     &__item {
@@ -102,16 +110,40 @@ $headerColor: #d00;
     }
 
     &__text {
-        font-size: $textFontSize;
         margin-top: 20px;
 
         @include respond(desktop-landscape) {
             margin: 0;
         }
 
-        &-right {
+        &-h1 {
+            font-size: $headerFontSize;
+
+            @include respond(desktop-wide) {
+                font-size: $headerFontSizeWide;
+            }
+        }
+
+        &-p {
             font-size: $textFontSize;
+            margin-top: 15px;
+        }
+
+        &-right {
             margin-top: 20px;
+
+            &-h1 {
+                font-size: $headerFontSize;
+
+                @include respond(desktop-wide) {
+                    font-size: $headerFontSizeWide;
+                }
+            }
+
+            &-p {
+                font-size: $textFontSize;
+                margin-top: 15px;
+            }
 
             @include respond(desktop-landscape) {
                 grid-column: 1/4;

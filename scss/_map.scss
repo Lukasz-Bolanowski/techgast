@@ -1,7 +1,7 @@
 $headerFont: 'Roboto Condensed', sans-serif;
 $textFont: 'Lato', sans-serif;
-$headerFontSIze: clamp(1.9rem, 4vw, 3.8rem);
-$headerFontSizeWide: clamp(1.9rem, 4vw, 4.5rem);
+$headerFontSize: clamp(2.2rem, 4vw, 3.7rem);
+$headerFontSizeWide: clamp(2.2rem, 4vw, 4.5rem);
 $headerColor: #d00;
 
 @mixin respond ($breakpoint) {
@@ -30,7 +30,7 @@ $headerColor: #d00;
     flex-direction: column;
 
     &__title {
-        font-size: $headerFontSIze;
+        font-size: $headerFontSize;
         text-transform: uppercase;
         color: $headerColor;
         margin: 15px auto;
