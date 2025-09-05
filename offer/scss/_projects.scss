@@ -116,7 +116,7 @@ $headerColor: #d00;
             margin: 0;
         }
 
-        &-h1 {
+        &-h2 {
             font-size: $headerFontSize;
 
             @include respond(desktop-wide) {

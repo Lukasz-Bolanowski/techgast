@@ -2,6 +2,7 @@ $headerFont: 'Roboto Condensed', sans-serif;
 $textFont: 'Lato', sans-serif;
 $headerFontSize: clamp(2.2rem, 4vw, 3.7rem);
 $headerFontSizeWide: clamp(2.2rem, 4vw, 4.5rem);
+$h2FontSize: clamp(1.5rem, 3vw, 2.8rem);
 $textFontSize: clamp(1.6rem, 1.1vw, 2.7rem);
 $menuFontSize: clamp(1.7rem, 1.4vw, 2rem);
 $headerColor: #d00;
@@ -27,15 +28,13 @@ $headerColor: #d00;
     }
 }
 
-.offer {
-    display: flex;
-    flex-direction: column;
+.catalogs {
+    padding: 20px;
 
     &__heading {
         font-size: $headerFontSize;
-        text-align: center;
-        margin-top: 40px;
         color: $headerColor;
+        text-align: center;
 
         @include respond(desktop-wide) {
             font-size: $headerFontSizeWide;
@@ -44,65 +43,24 @@ $headerColor: #d00;
 
     &__item {
         width: 90%;
-        margin: 15px auto;
+        margin: 20px auto 0 auto;
 
         @include respond(desktop-landscape) {
-            width: 80%;
-            display: grid;
-            grid-template-columns: repeat(4, minmax(150px, 1fr));;
+            width: 70%;
         }
-    }
-
-    &__photo {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        & img {
-            width: 60%;
-            border-radius: 20px;
-
-            @include respond(tablet) {
-                width: 40%;
-            }
-
-            @include respond(tablet-landscape) {
-                width: 30%;
-            }
-
-            @include respond(desktop-landscape) {
-                width: 80%;
-            }
-        }
-
-        @include respond(desktop-landscape) {
-            grid-column: 1/2;
-        }
-    }
-
-    &__text {
-        margin-top: 20px;
 
         &-h2 {
-            font-size: $headerFontSize;
-
-            @include respond(desktop-wide) {
-                font-size: $headerFontSizeWide;
-            }
+            font-size: $h2FontSize;
         }
 
-        &-p {
-            margin-top: 15px;
+        &-pdf {
+            text-decoration: none;
             font-size: $textFontSize;
-        }
+            color: $headerColor;
 
-        @include respond(desktop-landscape) {
-            grid-column: 2/5;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
+            @include respond(desktop-landscape) {
+                cursor: pointer;
+            }
         }
     }
 }
