@@ -46,7 +46,6 @@ $white: #fff;
     }
 
     &__person {
-
         &-photo {
             display: flex;
             justify-content: center;
@@ -70,11 +69,6 @@ $white: #fff;
         }
 
         &-text {
-
-            & p {
-                font-size: $textFontSize;
-            }
-
             & h1,
             & h2 {
                 font-size: $headerFontSIze;
@@ -87,6 +81,10 @@ $white: #fff;
 
             & h2 {
                 font-size: $h2FontSize;
+            }
+
+            & p {
+                font-size: $textFontSize;
             }
         }
     }

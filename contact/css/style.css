@@ -372,9 +372,6 @@ aside .logo .logo-mobile {
     width: 60%;
   }
 }
-.contact__person-text p {
-  font-size: clamp(1.6rem, 1.1vw, 1.7rem);
-}
 .contact__person-text h1, .contact__person-text h2 {
   font-size: clamp(2.2rem, 4vw, 3.7rem);
   margin: 15px 0;
@@ -386,6 +383,9 @@ aside .logo .logo-mobile {
 }
 .contact__person-text h2 {
   font-size: clamp(1.5rem, 3vw, 2.8rem);
+}
+.contact__person-text p {
+  font-size: clamp(1.6rem, 1.1vw, 1.7rem);
 }
 
 .forms {
