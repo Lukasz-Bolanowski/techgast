@@ -53,6 +53,7 @@ h1, h2, h3 {
   font-size: clamp(1.6rem, 1.1vw, 1.7rem);
   border: 2px solid #fff;
   border-radius: 20px;
+  text-decoration: none;
 }
 @media (min-width: 1024px) and (orientation: landscape) {
   .confirmation__return {

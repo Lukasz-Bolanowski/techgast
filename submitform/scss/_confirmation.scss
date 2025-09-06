@@ -57,6 +57,7 @@ $white: #fff;
         font-size: $textFontSize;
         border: 2px solid $white;
         border-radius: 20px;
+        text-decoration: none;
 
         @include respond(desktop-landscape) {
             cursor: pointer;
