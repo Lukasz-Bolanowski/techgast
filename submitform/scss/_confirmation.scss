@@ -1,0 +1,70 @@
+$headerFont: 'Roboto Condensed', sans-serif;
+$textFont: 'Lato', sans-serif;
+$headerFontSize: clamp(2.2rem, 4vw, 3.7rem);
+$headerFontSizeWide: clamp(2.2rem, 4vw, 4.5rem);
+$textFontSize: clamp(1.6rem, 1.1vw, 1.7rem);
+$darkColor: rgb(27, 35, 46);
+$headerColor: #d00;
+$hoverColor: #b00;
+$white: #fff;
+
+@mixin respond ($breakpoint) {
+    @if ($breakpoint == tablet) {
+        @media (min-width: 768px) {@content;}
+    }
+    @else if $breakpoint == desktop {
+        @media (min-width: 1024px) {@content;}
+    }
+    @else if ($breakpoint == desktop-landscape) {
+        @media (min-width: 1024px) and (orientation: landscape) {@content;}
+    }
+    @else if ($breakpoint == desktop-wide) {
+        @media (min-width: 1920px) and (orientation: landscape) {@content;}
+    }
+    @else if ($breakpoint == menu-landscape) {
+        @media (min-width: 667px) and (orientation: landscape) {@content;}
+    }
+}
+
+.confirmation {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $darkColor;
+
+    &__heading {
+        font-size: $headerFontSize;
+        color: $headerColor;
+
+        @include respond(desktop-wide) {
+            font-size: $headerFontSizeWide;
+        }
+    }
+
+    &__text {
+        color: $white;
+        font-size: $textFontSize;
+        margin-top: 15px;
+    }
+
+    &__return {
+        padding: 10px 25px;
+        background-color: $headerColor;
+        color: $darkColor;
+        margin-top: 40px;
+        font-size: $textFontSize;
+        border: 2px solid $white;
+        border-radius: 20px;
+
+        @include respond(desktop-landscape) {
+            cursor: pointer;
+            transition: background-color .3s ease;
+
+            &:hover {
+                background-color: $hoverColor;
+            }
+        }
+    }
+}
