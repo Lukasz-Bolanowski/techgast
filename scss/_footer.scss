@@ -24,7 +24,7 @@ $white: #fff;
         @media (min-width: 1024px) and (orientation: landscape) {@content;}
     }
     @else if ($breakpoint == desktop-wide) {
-        @media (min-width: 2000px) and (orientation: landscape) {@content;}
+        @media (min-width: 1920px) and (orientation: landscape) {@content;}
     }
     @else if ($breakpoint == menu-landscape) {
         @media (min-width: 667px) and (orientation: landscape) {@content;}
