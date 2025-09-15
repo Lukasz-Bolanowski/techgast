@@ -809,6 +809,12 @@ article.active .content-text {
     margin: 0 auto;
   }
 }
+@media (min-width: 1920px) and (orientation: landscape) {
+  .footer__wrapper {
+    width: 75%;
+    max-width: 1600px;
+  }
+}
 .footer__wrapper__adress, .footer__wrapper__contact, .footer__wrapper__rodo {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 200px;

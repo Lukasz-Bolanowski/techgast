@@ -50,7 +50,7 @@ $white: #fff;
             margin: 0 auto;
         }
 
-        @include respond(wide-landscape) {
+        @include respond(desktop-wide) {
             width: 75%;
             max-width: 1600px;
         }
