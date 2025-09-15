@@ -138,7 +138,7 @@ h1, h2, h3 {
   font-size: clamp(2.2rem, 4vw, 3.7rem);
   color: #fff;
 }
-@media (min-width: 1920px) and (orientation: landscape) {
+@media (min-width: 2000px) and (orientation: landscape) {
   .hero__title-h1 {
     font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
@@ -147,7 +147,7 @@ h1, h2, h3 {
   color: #d00;
 }
 .hero__title-p {
-  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1vw, 2.7rem);
   margin-top: 20px;
   color: #fff;
 }
@@ -336,7 +336,7 @@ aside .logo .logo-mobile {
   color: #d00;
   text-align: center;
 }
-@media (min-width: 1920px) and (orientation: landscape) {
+@media (min-width: 2000px) and (orientation: landscape) {
   .catalogs__heading {
     font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
@@ -351,11 +351,11 @@ aside .logo .logo-mobile {
   }
 }
 .catalogs__item-h2 {
-  font-size: clamp(1.5rem, 3vw, 2.8rem);
+  font-size: clamp(1.7rem, 1.5vw, 2.3rem);
 }
 .catalogs__item-pdf {
   text-decoration: none;
-  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1vw, 2.7rem);
   color: #d00;
 }
 @media (min-width: 1024px) and (orientation: landscape) {
@@ -379,7 +379,7 @@ aside .logo .logo-mobile {
   margin-top: 40px;
   color: #d00;
 }
-@media (min-width: 1920px) and (orientation: landscape) {
+@media (min-width: 2000px) and (orientation: landscape) {
   .offer__heading {
     font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
@@ -437,14 +437,14 @@ aside .logo .logo-mobile {
 .offer__text-h2 {
   font-size: clamp(2.2rem, 4vw, 3.7rem);
 }
-@media (min-width: 1920px) and (orientation: landscape) {
+@media (min-width: 2000px) and (orientation: landscape) {
   .offer__text-h2 {
     font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
 }
 .offer__text-p {
   margin-top: 15px;
-  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1vw, 2.7rem);
 }
 @media (min-width: 1024px) and (orientation: landscape) {
   .offer__text {
@@ -509,7 +509,7 @@ aside .logo .logo-mobile {
   font-size: clamp(1.5rem, 3vw, 2.8rem);
 }
 .footer__adress-details, .footer__contact-details, .footer__rodo-pdf {
-  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1vw, 2.7rem);
   margin-top: 5px;
 }
 .footer__rodo-pdf {
@@ -577,7 +577,7 @@ aside .logo .logo-mobile {
           justify-content: center;
 }
 .footer__details {
-  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1vw, 2.7rem);
   text-align: center;
 }
 
@@ -596,7 +596,7 @@ aside .logo .logo-mobile {
   text-align: center;
   margin-top: 40px;
 }
-@media (min-width: 1920px) and (orientation: landscape) {
+@media (min-width: 2000px) and (orientation: landscape) {
   .projects__heading {
     font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
@@ -695,13 +695,13 @@ aside .logo .logo-mobile {
 .projects__text-h2 {
   font-size: clamp(2.2rem, 4vw, 3.7rem);
 }
-@media (min-width: 1920px) and (orientation: landscape) {
+@media (min-width: 2000px) and (orientation: landscape) {
   .projects__text-h2 {
     font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
 }
 .projects__text-p {
-  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1vw, 2.7rem);
   margin-top: 15px;
 }
 .projects__text-right {
@@ -710,13 +710,13 @@ aside .logo .logo-mobile {
 .projects__text-right-h1 {
   font-size: clamp(2.2rem, 4vw, 3.7rem);
 }
-@media (min-width: 1920px) and (orientation: landscape) {
+@media (min-width: 2000px) and (orientation: landscape) {
   .projects__text-right-h1 {
     font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
 }
 .projects__text-right-p {
-  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1vw, 2.7rem);
   margin-top: 15px;
 }
 @media (min-width: 1024px) and (orientation: landscape) {

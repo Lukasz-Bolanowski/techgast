@@ -2,7 +2,7 @@ $headerFont: 'Roboto Condensed', sans-serif;
 $textFont: 'Lato', sans-serif;
 $headerFontSize: clamp(2.2rem, 4vw, 3.7rem);
 $headerFontSizeWide: clamp(2.2rem, 4vw, 4.5rem);
-$textFontSize: clamp(1.6rem, 1.1vw, 2.7rem);
+$textFontSize: clamp(1.6rem, 1vw, 2.7rem);
 $menuFontSize: clamp(1.7rem, 1.4vw, 2rem);
 $darkColor: rgb(27, 35, 46);
 $stickyMenu: rgba(27, 35, 46, 0.85);
@@ -24,7 +24,7 @@ $white: #fff;
         @media (min-width: 1024px) and (orientation: landscape) {@content;}
     }
     @else if ($breakpoint == desktop-wide) {
-        @media (min-width: 1920px) and (orientation: landscape) {@content;}
+        @media (min-width: 2000px) and (orientation: landscape) {@content;}
     }
     @else if ($breakpoint == menu-landscape) {
         @media (min-width: 667px) and (orientation: landscape) {@content;}

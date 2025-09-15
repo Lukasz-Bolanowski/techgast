@@ -141,13 +141,13 @@ h1, h2, h3 {
 .hero__title-h1 .hilight {
   color: #d00;
 }
-@media (min-width: 1920px) and (orientation: landscape) {
+@media (min-width: 2000px) and (orientation: landscape) {
   .hero__title-h1 {
     font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
 }
 .hero__title-p {
-  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1vw, 2.7rem);
   margin-top: 35px;
   color: #fff;
 }
@@ -339,7 +339,7 @@ aside .logo .logo-mobile {
   margin: 15px auto;
   width: 80%;
 }
-@media (min-width: 1920px) and (orientation: landscape) {
+@media (min-width: 2000px) and (orientation: landscape) {
   .intro__title {
     font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
@@ -443,13 +443,13 @@ aside .logo .logo-mobile {
 .intro__info-title {
   font-size: clamp(2.2rem, 4vw, 3.7rem);
 }
-@media (min-width: 1920px) and (orientation: landscape) {
+@media (min-width: 2000px) and (orientation: landscape) {
   .intro__info-title {
     font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
 }
 .intro__info-text {
-  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1vw, 2.7rem);
   margin-top: 20px;
 }
 
@@ -464,7 +464,7 @@ aside .logo .logo-mobile {
   text-align: center;
   margin: 15px;
 }
-@media (min-width: 1920px) and (orientation: landscape) {
+@media (min-width: 2000px) and (orientation: landscape) {
   .gallery__title {
     font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
@@ -576,13 +576,13 @@ aside .logo .logo-mobile {
   font-size: clamp(2.2rem, 4vw, 3.7rem);
   color: #d00;
 }
-@media (min-width: 1920px) and (orientation: landscape) {
+@media (min-width: 2000px) and (orientation: landscape) {
   .gallery__item-text-right h2 {
     font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
 }
 .gallery__item-text-right p {
-  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1vw, 2.7rem);
   margin-top: 15px;
 }
 @media (min-width: 768px) {
@@ -627,13 +627,13 @@ aside .logo .logo-mobile {
   font-size: clamp(2.2rem, 4vw, 3.7rem);
   color: #d00;
 }
-@media (min-width: 1920px) and (orientation: landscape) {
+@media (min-width: 2000px) and (orientation: landscape) {
   .gallery__item-text h2 {
     font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
 }
 .gallery__item-text p {
-  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1vw, 2.7rem);
   margin-top: 15px;
 }
 
@@ -648,7 +648,7 @@ aside .logo .logo-mobile {
   color: #d00;
   margin: 15px;
 }
-@media (min-width: 1920px) and (orientation: landscape) {
+@media (min-width: 2000px) and (orientation: landscape) {
   .accordion__title {
     font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
@@ -689,12 +689,12 @@ aside .logo .logo-mobile {
   color: #d00;
 }
 .accordion__item-text {
-  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1vw, 2.7rem);
   padding: 10px;
 }
 .accordion__item-text .fa-check {
   color: #0d0;
-  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1vw, 2.7rem);
   margin-right: 5px;
 }
 .accordion__item-content {
@@ -761,7 +761,7 @@ article.active .content-text {
   color: #d00;
   margin: 15px auto;
 }
-@media (min-width: 1920px) and (orientation: landscape) {
+@media (min-width: 2000px) and (orientation: landscape) {
   .map__title {
     font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
@@ -819,10 +819,10 @@ article.active .content-text {
   margin-top: 30px;
 }
 .footer__adress h3, .footer__contact h3, .footer__rodo h3 {
-  font-size: clamp(1.5rem, 3vw, 2.8rem);
+  font-size: clamp(2.2rem, 4vw, 3rem);
 }
 .footer__adress-details, .footer__contact-details, .footer__rodo-pdf {
-  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1vw, 2.7rem);
   margin-top: 5px;
 }
 .footer__rodo-pdf {
@@ -890,6 +890,6 @@ article.active .content-text {
           justify-content: center;
 }
 .footer__details {
-  font-size: clamp(1.6rem, 1.1vw, 2.7rem);
+  font-size: clamp(1.6rem, 1vw, 2.7rem);
   text-align: center;
 }/*# sourceMappingURL=style.css.map */
