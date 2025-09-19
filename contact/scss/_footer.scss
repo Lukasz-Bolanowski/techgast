@@ -88,34 +88,6 @@ $white: #fff;
         display: block;
     }
 
-    &__navigation {
-            margin-top: 30px;
-            padding: 20px;
-
-            @include respond(tablet) {
-                margin-right: 100px;
-            }
-
-            @include respond(desktop) {
-                margin: 0;
-            }
-
-            & ul {
-                @include respond(desktop-landscape) {
-                    display: flex;
-                }
-
-                & .menu__item-dialer {
-                    text-align: center;
-                    margin-top: 15px;
-
-                    @include respond(desktop) {
-                        margin: 0;
-                    }
-                }
-            }
-        }
-
     &__author {
         display: flex;
         justify-content: center;
@@ -136,5 +108,61 @@ $white: #fff;
     &__details {
         font-size: $textFontSize;
         text-align: center;
+    }
+}
+
+.footernav {
+    margin-top: 20px;
+
+    @include respond(tablet) {
+        margin-right: 100px;
+    }
+
+    @include respond(desktop) {
+        margin: 0;
+    }
+
+    &__menu {
+        list-style: none;
+
+        @include respond(desktop-landscape) {
+            display: flex;
+        }
+
+        &-item {
+        text-align: center;
+        margin-bottom: 10px;
+
+            & a {
+                margin: 20px;
+                cursor: pointer;
+                transition: color .2s ease;
+                font-size: $menuFontSize;
+                color: $white;
+                font-family: $textFont;
+                text-decoration: none;
+
+                &:hover {
+                    color: $headerColor;
+                }
+
+                &.active {
+                    color: $headerColor;
+                }
+            }
+
+            &-dialer {
+                text-align: center;
+
+                & a {
+                    padding: 7px 15px;
+                    background-color: $headerColor;
+                    text-decoration: none;
+                    border-radius: 20px;
+                    color: $white;
+                    font-size: $menuFontSize;
+                }
+            }
+        }
     }
 }

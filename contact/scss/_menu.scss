@@ -81,6 +81,18 @@ $white: #fff;
         @include respond(desktop-landscape) {
             display: none;
         }
+
+        &.active {
+            transform: rotate(180deg);
+
+            & +.hamburger {
+                transform: translateY(400px);
+            }
+
+            & +aside {
+                transform: translateX(-100%);
+            }
+        }
     }
 
     &__info {
@@ -163,18 +175,6 @@ $white: #fff;
     }
 }
 
-.hamburger.active {
-    transform: rotate(180deg);
-
-    & +.hamburger {
-        transform: translateY(400px);
-    }
-
-    & +aside {
-        transform: translateX(-100%);
-    }
-}
-
 aside {
     display: flex;
     justify-content: center;
@@ -201,6 +201,42 @@ aside {
         }
     }
 
+    & .navigation__menu {
+        list-style: none;
+
+        &-item {
+            text-align: center;
+            margin-bottom: 10px;
+
+            & a {
+                margin: 20px;
+                cursor: pointer;
+                transition: color .2s ease;
+                font-size: $menuFontSize;
+                color: $white;
+                font-family: $textFont;
+                text-decoration: none;
+
+                &:hover {
+                    color: $headerColor;
+                }
+
+                &.active {
+                    color: $headerColor;
+                }
+            }
+
+            &-dialer a {
+                padding: 7px 15px;
+                background-color: $headerColor;
+                text-decoration: none;
+                border-radius: 20px;
+                color: $white;
+                font-size: $menuFontSize;
+            }
+        }
+    }
+
     @include respond(menu-landscape) {
         flex-direction: row;
     }
@@ -223,21 +259,46 @@ aside {
     z-index: 2;
     transition: padding .3s ease, background-color .3s ease;
 
-    & .menu {
+    & .navigation__menu {
         display: flex;
+        list-style: none;
+
+        &-item {
+        text-align: center;
+        margin-bottom: 10px;
+
+            & a {
+                margin: 20px;
+                cursor: pointer;
+                transition: color .2s ease;
+                font-size: $menuFontSize;
+                color: $white;
+                font-family: $textFont;
+                text-decoration: none;
+
+                &:hover {
+                    color: $headerColor;
+                }
+
+                &.active {
+                    color: $headerColor;
+                }
+            }
+
+            &-dialer a {
+                padding: 7px 15px;
+                background-color: $headerColor;
+                text-decoration: none;
+                border-radius: 20px;
+                color: $white;
+                font-size: $menuFontSize;
+            }
+        }
     }
 
     & .logo-desktop {
         width: 80px;
         height: 80px;
-    }
-
-    & .menu__item {
-        margin: 0;
-
-        & a:hover {
-            color: $headerColor;
-        }
     }
 
     @include respond(desktop-landscape) {
@@ -248,36 +309,4 @@ aside {
 .sticky {
     padding: 10px;
     background-color: $stickyMenu;
-}
-
-.menu {
-    list-style: none;
-
-    &__item {
-        text-align: center;
-        margin-bottom: 10px;
-
-        & a {
-            margin: 20px;
-            cursor: pointer;
-            transition: color .2s ease;
-            font-size: $menuFontSize;
-            color: $white;
-            font-family: $textFont;
-            text-decoration: none;
-
-            &.active {
-                color: $headerColor;
-            }
-        }
-
-        &-dialer a {
-            padding: 7px 15px;
-            background-color: $headerColor;
-            text-decoration: none;
-            border-radius: 20px;
-            color: $white;
-            font-size: $menuFontSize;
-        }
-    }
 }
