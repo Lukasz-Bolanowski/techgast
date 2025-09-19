@@ -5,13 +5,10 @@ $headerFontSizeWide: clamp(2.2rem, 4vw, 4.5rem);
 $textFontSize: clamp(1.6rem, 1vw, 2.7rem);
 $menuFontSize: clamp(1.7rem, 1.4vw, 2rem);
 $h2FontSize: clamp(1.7rem, 1.5vw, 2.3rem);
+$boxesColor1: rgb(51, 70, 96);
+$boxesColor2: rgb(46, 87, 144);
 $headerColor: #d00;
-$redColor: rgb(255, 61, 61);
-$greenColor: rgb(119, 255, 61);
-$blueColor: rgb(61, 126, 255);
-$violetColor: rgb(158, 61, 255);
-$cyanColor: rgb(61, 219, 255);
-$pinkColor: rgb(255, 61, 232);
+$white: #fff;
 
 @mixin respond ($breakpoint) {
     @if ($breakpoint == tablet) {
@@ -35,16 +32,14 @@ $pinkColor: rgb(255, 61, 232);
 }
 
 .boxes {
+    background-image: linear-gradient($boxesColor1, $boxesColor2);
+
     &__heading {
         font-size: $headerFontSize;
         text-align: center;
         color: $headerColor;
         text-transform: uppercase;
-        margin-top: 20px;
-
-        @include respond(desktop-wide) {
-            font-size: $headerFontSizeWide;
-        }
+        padding: 15px 0;
     }
 
     &__main {
@@ -52,7 +47,7 @@ $pinkColor: rgb(255, 61, 232);
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 20px 10px;
         padding: 30px 0;
-        max-width: 1920px;
+        max-width: 1902px;
 
         @include respond(desktop) {
             width: 70%;
@@ -65,46 +60,13 @@ $pinkColor: rgb(255, 61, 232);
         width: 90%;
         margin: 0 auto;
         padding: 60px 25px;
-        background-image: linear-gradient(to right, rgb(255, 225, 201), rgb(255, 254, 201));
         border-radius: 15px;
+        border: 3px solid $headerColor;
         text-align: center;
 
         &-heading {
             font-size: $h2FontSize;
-        }
-
-        &-dot {
-            position: absolute;
-            top: -10%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-
-            &-red {
-                background-color: $redColor;
-            }
-
-            &-green {
-                background-color: $greenColor;
-            }
-
-            &-blue {
-                background-color: $blueColor;
-            }
-
-            &-violet {
-                background-color: $violetColor;
-            }
-
-            &-cyan {
-                background-color: $cyanColor;
-            }
-
-            &-pink {
-                background-color: $pinkColor;
-            }
+            color: $white;
         }
     }
 }

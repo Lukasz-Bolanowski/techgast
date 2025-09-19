@@ -441,19 +441,6 @@ aside .navigation__menu-item-dialer a {
   }
 }
 
-.boxes {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px 10px;
-  padding: 30px 0;
-  max-width: 1902px;
-}
-@media (min-width: 768px) {
-  .boxes {
-    width: 70%;
-    margin: 0 auto;
-  }
-}
 .boxes__heading {
   font-size: clamp(2.2rem, 4vw, 3.7rem);
   text-align: center;
@@ -464,6 +451,19 @@ aside .navigation__menu-item-dialer a {
 @media (min-width: 2000px) and (orientation: landscape) {
   .boxes__heading {
     font-size: clamp(2.2rem, 4vw, 4.5rem);
+  }
+}
+.boxes__main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px 10px;
+  padding: 30px 0;
+  max-width: 1920px;
+}
+@media (min-width: 1024px) {
+  .boxes__main {
+    width: 70%;
+    margin: 0 auto;
   }
 }
 .boxes__item {

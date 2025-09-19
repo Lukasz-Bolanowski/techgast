@@ -413,7 +413,8 @@ aside .navigation__menu-item-dialer a {
 }
 
 .forms {
-  background-color: rgb(51, 70, 96);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(51, 70, 96)), to(rgb(46, 87, 144)));
+  background-image: linear-gradient(rgb(51, 70, 96), rgb(46, 87, 144));
   padding: 25px 0;
 }
 @media (min-width: 1024px) {
@@ -526,7 +527,7 @@ aside .navigation__menu-item-dialer a {
   }
 }
 .forms__submitform:hover {
-  background-color: rgb(70, 94, 127);
+  background-color: rgb(46, 87, 144);
 }
 
 .footer {

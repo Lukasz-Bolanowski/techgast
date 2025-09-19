@@ -4,8 +4,9 @@ $headerFontSize: clamp(2.2rem, 4vw, 3.7rem);
 $headerFontSizeWide: clamp(2.2rem, 4vw, 4.5rem);
 $textFontSize: clamp(1.6rem, 1vw, 1.7rem);
 $darkColor: rgb(27, 35, 46);
-$formColor: rgb(51, 70, 96);
-$hoverForm: rgb(70, 94, 127);
+$formColor1: rgb(51, 70, 96);
+$formColor2: rgb(46, 87, 144);
+$hoverForm: rgb(46, 87, 144);
 $inputBackground: rgb(245, 247, 250);
 $headerColor: #d00;
 $white: #fff;
@@ -29,7 +30,7 @@ $white: #fff;
 }
 
 .forms {
-    background-color: $formColor;
+    background-image: linear-gradient($formColor1, $formColor2);
     padding: 25px 0;
 
     @include respond(desktop) {
@@ -125,7 +126,7 @@ $white: #fff;
         padding: 10px;
         font-size: $textFontSize;
         border-radius: 10px;
-        background-color: $formColor;
+        background-color: $formColor1;
         color: $white;
         transition: background-color .3s ease;
 
