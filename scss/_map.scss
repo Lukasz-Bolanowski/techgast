@@ -3,7 +3,7 @@ $textFont: 'Lato', sans-serif;
 $headerFontSize: clamp(2.2rem, 4vw, 3.7rem);
 $headerFontSizeWide: clamp(2.2rem, 4vw, 4.5rem);
 $textFontSize: clamp(1.6rem, 1vw, 2.7rem);
-$headerColor: #d00;
+$headerColor: rgb(15, 195, 249);
 
 @mixin respond ($breakpoint) {
     @if ($breakpoint == tablet) {
@@ -46,6 +46,11 @@ $headerColor: #d00;
             font-size: $headerFontSize;
             text-transform: uppercase;
             color: $headerColor;
+            text-align: center;
+
+            @include respond(desktop-landscape) {
+                text-align: left;
+            }
 
             @include respond(desktop-wide) {
                 font-size: $headerFontSizeWide;
@@ -54,7 +59,16 @@ $headerColor: #d00;
 
         &-text {
             font-size: $textFontSize;
-            margin-top: 15px;
+            width: 90%;
+            margin: 15px auto 0 auto;
+
+            @include respond(tablet) {
+                width: 70%;
+            }
+
+            @include respond(desktop-landscape) {
+                width: 100%;
+            }
         }
     }
 

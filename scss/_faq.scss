@@ -6,8 +6,7 @@ $textFontSize: clamp(1.6rem, 1vw, 2.7rem);
 $accordionFontSize: clamp(1.8rem, 2.2vw, 2.2rem);
 $darkColor: rgb(27, 35, 46);
 $accordionActive: rgb(51, 70, 96);
-$lightColor: rgb(0, 183, 194);
-$headerColor: #d00;
+$headerColor: rgb(15, 195, 249);
 $white: #fff;
 
 @mixin respond ($breakpoint) {

@@ -63,7 +63,7 @@ h1, h2, h3 {
   position: absolute;
   width: 35px;
   height: 2px;
-  background-color: #d00;
+  background-color: rgb(15, 195, 249);
 }
 .header .hamburger__bars::before, .header .hamburger__bars::after {
   content: "";
@@ -71,7 +71,7 @@ h1, h2, h3 {
   position: absolute;
   width: 80%;
   height: 2px;
-  background-color: #d00;
+  background-color: rgb(15, 195, 249);
 }
 .header .hamburger__bars::before {
   top: -12px;
@@ -169,7 +169,7 @@ h1, h2, h3 {
   }
 }
 .header__title-h1 .hilight {
-  color: #d00;
+  color: rgb(15, 195, 249);
 }
 .header__title-p {
   font-size: clamp(1.6rem, 1vw, 2.7rem);
@@ -269,14 +269,14 @@ aside .navigation__menu-item a {
   text-decoration: none;
 }
 aside .navigation__menu-item a:hover {
-  color: #d00;
+  color: rgb(15, 195, 249);
 }
 aside .navigation__menu-item a.active {
-  color: #d00;
+  color: rgb(15, 195, 249);
 }
 aside .navigation__menu-item-dialer a {
   padding: 7px 15px;
-  background-color: #d00;
+  background-color: rgb(15, 195, 249);
   text-decoration: none;
   border-radius: 20px;
   color: #fff;
@@ -341,14 +341,14 @@ aside .socials {
   text-decoration: none;
 }
 .desktop .navigation__menu-item a:hover {
-  color: #d00;
+  color: rgb(15, 195, 249);
 }
 .desktop .navigation__menu-item a.active {
-  color: #d00;
+  color: rgb(15, 195, 249);
 }
 .desktop .navigation__menu-item-dialer a {
   padding: 7px 15px;
-  background-color: #d00;
+  background-color: rgb(15, 195, 249);
   text-decoration: none;
   border-radius: 20px;
   color: #fff;
@@ -377,7 +377,7 @@ aside .socials {
   font-size: clamp(2.2rem, 4vw, 3.7rem);
   text-transform: uppercase;
   text-align: center;
-  color: #d00;
+  color: rgb(15, 195, 249);
   margin: 15px auto;
   width: 80%;
 }
@@ -501,7 +501,7 @@ aside .socials {
 }
 .gallery__title {
   font-size: clamp(2.2rem, 4vw, 3.7rem);
-  color: #d00;
+  color: rgb(15, 195, 249);
   text-transform: uppercase;
   text-align: center;
   margin: 15px;
@@ -616,7 +616,7 @@ aside .socials {
 }
 .gallery__item-text-right h2 {
   font-size: clamp(2.2rem, 4vw, 3.7rem);
-  color: #d00;
+  color: rgb(15, 195, 249);
 }
 @media (min-width: 2000px) and (orientation: landscape) {
   .gallery__item-text-right h2 {
@@ -667,7 +667,7 @@ aside .socials {
 }
 .gallery__item-text h2 {
   font-size: clamp(2.2rem, 4vw, 3.7rem);
-  color: #d00;
+  color: rgb(15, 195, 249);
 }
 @media (min-width: 2000px) and (orientation: landscape) {
   .gallery__item-text h2 {
@@ -687,7 +687,7 @@ aside .socials {
   font-size: clamp(2.2rem, 4vw, 3.7rem);
   text-transform: uppercase;
   text-align: center;
-  color: #d00;
+  color: rgb(15, 195, 249);
   margin: 15px;
 }
 @media (min-width: 2000px) and (orientation: landscape) {
@@ -723,7 +723,7 @@ aside .socials {
 }
 .accordion__item-title .fa-plus, .accordion__item-title .fa-minus {
   margin-right: 15px;
-  color: #d00;
+  color: rgb(15, 195, 249);
 }
 .accordion__item-text {
   font-size: clamp(1.6rem, 1vw, 2.7rem);
@@ -743,7 +743,7 @@ aside .socials {
 }
 .accordion .active .accordion__item-title {
   border: none;
-  color: #d00;
+  color: rgb(15, 195, 249);
 }
 
 @-webkit-keyframes fadeIn {
@@ -815,7 +815,13 @@ article.active .content-text {
 .map__info-title {
   font-size: clamp(2.2rem, 4vw, 3.7rem);
   text-transform: uppercase;
-  color: #d00;
+  color: rgb(15, 195, 249);
+  text-align: center;
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .map__info-title {
+    text-align: left;
+  }
 }
 @media (min-width: 2000px) and (orientation: landscape) {
   .map__info-title {
@@ -824,7 +830,18 @@ article.active .content-text {
 }
 .map__info-text {
   font-size: clamp(1.6rem, 1vw, 2.7rem);
-  margin-top: 15px;
+  width: 90%;
+  margin: 15px auto 0 auto;
+}
+@media (min-width: 768px) {
+  .map__info-text {
+    width: 70%;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .map__info-text {
+    width: 100%;
+  }
 }
 .map__container {
   height: 40vh;
@@ -885,15 +902,16 @@ article.active .content-text {
 .footer__adress, .footer__contact, .footer__rodo {
   margin-top: 30px;
 }
-.footer__adress h3, .footer__contact h3, .footer__rodo h3 {
+.footer__adress-header, .footer__contact-header, .footer__rodo-header {
   font-size: clamp(2.2rem, 4vw, 3rem);
+  color: rgb(15, 195, 249);
 }
 .footer__adress-details, .footer__contact-details, .footer__rodo-pdf {
   font-size: clamp(1.6rem, 1vw, 2.7rem);
   margin-top: 5px;
 }
 .footer__rodo-pdf {
-  color: #d00;
+  color: rgb(15, 195, 249);
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
@@ -969,17 +987,17 @@ article.active .content-text {
   text-decoration: none;
 }
 .footernav__menu-item a:hover {
-  color: #d00;
+  color: rgb(15, 195, 249);
 }
 .footernav__menu-item a.active {
-  color: #d00;
+  color: rgb(15, 195, 249);
 }
 .footernav__menu-item-dialer {
   text-align: center;
 }
 .footernav__menu-item-dialer a {
   padding: 7px 15px;
-  background-color: #d00;
+  background-color: rgb(15, 195, 249);
   text-decoration: none;
   border-radius: 20px;
   color: #fff;

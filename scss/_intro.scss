@@ -3,6 +3,7 @@ $textFont: 'Lato', sans-serif;
 $headerFontSize: clamp(2.2rem, 4vw, 3.7rem);
 $headerFontSizeWide: clamp(2.2rem, 4vw, 4.5rem);
 $textFontSize: clamp(1.6rem, 1vw, 2.7rem);
+$headerColor: rgb(15, 195, 249);
 
 @mixin respond ($breakpoint) {
     @if ($breakpoint == tablet) {
@@ -32,7 +33,7 @@ $textFontSize: clamp(1.6rem, 1vw, 2.7rem);
         font-size: $headerFontSize;
         text-transform: uppercase;
         text-align: center;
-        color: #d00;
+        color: $headerColor;
         margin: 15px auto;
         width: 80%;
 
