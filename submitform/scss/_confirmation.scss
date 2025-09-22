@@ -4,8 +4,8 @@ $headerFontSize: clamp(2.2rem, 4vw, 3.7rem);
 $headerFontSizeWide: clamp(2.2rem, 4vw, 4.5rem);
 $textFontSize: clamp(1.6rem, 1.1vw, 1.7rem);
 $darkColor: rgb(27, 35, 46);
-$headerColor: #d00;
-$hoverColor: #b00;
+$headerColor: rgb(15, 195, 249);
+$hoverColor: rgb(12, 155, 198);
 $white: #fff;
 
 @mixin respond ($breakpoint) {

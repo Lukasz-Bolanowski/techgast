@@ -9,7 +9,7 @@ $formColor1: rgb(51, 70, 96);
 $formColor2: rgb(46, 87, 144);
 $hoverForm: rgb(46, 87, 144);
 $inputBackground: rgb(245, 247, 250);
-$headerColor: #d00;
+$headerColor: rgb(15, 195, 249);
 $white: #fff;
 
 @mixin respond ($breakpoint) {
@@ -93,7 +93,7 @@ $white: #fff;
         &-info {
             text-align: center;
             margin-bottom: 15px;
-            color: $white;
+            color: $headerColor;
             font-size: $formFontSize;
         }
     }
@@ -127,6 +127,7 @@ $white: #fff;
         padding: 10px;
         font-size: $textFontSize;
         border-radius: 10px;
+        border: 2px solid $headerColor;
         background-color: $formColor1;
         color: $white;
         transition: background-color .3s ease;

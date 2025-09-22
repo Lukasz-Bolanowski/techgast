@@ -33,7 +33,7 @@ h1, h2, h3 {
 }
 .confirmation__heading {
   font-size: clamp(2.2rem, 4vw, 3.7rem);
-  color: #d00;
+  color: rgb(15, 195, 249);
 }
 @media (min-width: 1920px) and (orientation: landscape) {
   .confirmation__heading {
@@ -47,7 +47,7 @@ h1, h2, h3 {
 }
 .confirmation__return {
   padding: 10px 25px;
-  background-color: #d00;
+  background-color: rgb(15, 195, 249);
   color: rgb(27, 35, 46);
   margin-top: 40px;
   font-size: clamp(1.6rem, 1.1vw, 1.7rem);
@@ -62,6 +62,6 @@ h1, h2, h3 {
     transition: background-color 0.3s ease;
   }
   .confirmation__return:hover {
-    background-color: #b00;
+    background-color: rgb(12, 155, 198);
   }
 }/*# sourceMappingURL=style.css.map */
