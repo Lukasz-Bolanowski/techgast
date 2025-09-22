@@ -68,9 +68,6 @@ $white: #fff;
             & .fa-plus,
             & .fa-minus {
                 margin-right: 15px;
-            }
-
-            & .fa-plus {
                 color: $headerColor;
             }
         }
@@ -96,6 +93,7 @@ $white: #fff;
 
     & .active .accordion__item-title {
         border: none;
+        color: $headerColor;
     }
 }
 

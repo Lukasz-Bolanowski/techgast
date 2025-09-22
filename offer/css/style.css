@@ -14,10 +14,27 @@ h1, h2, h3 {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-.hero {
+.header {
   min-height: 100vh;
 }
-.hero .hamburger {
+.header__box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(27, 35, 46, 0.85);
+  z-index: 1;
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .header__box {
+    display: none;
+  }
+}
+.header__box-img {
+  width: 30%;
+}
+.header .hamburger {
   position: fixed;
   top: 20px;
   right: 20px;
@@ -31,7 +48,7 @@ h1, h2, h3 {
   transition: transform 0.2s ease, -webkit-transform 0.2s ease;
   z-index: 2;
 }
-.hero .hamburger__container {
+.header .hamburger__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,13 +59,13 @@ h1, h2, h3 {
   width: 35px;
   height: 30px;
 }
-.hero .hamburger__bars {
+.header .hamburger__bars {
   position: absolute;
   width: 35px;
   height: 2px;
   background-color: #d00;
 }
-.hero .hamburger__bars::before, .hero .hamburger__bars::after {
+.header .hamburger__bars::before, .header .hamburger__bars::after {
   content: "";
   display: block;
   position: absolute;
@@ -56,30 +73,30 @@ h1, h2, h3 {
   height: 2px;
   background-color: #d00;
 }
-.hero .hamburger__bars::before {
+.header .hamburger__bars::before {
   top: -12px;
 }
-.hero .hamburger__bars::after {
+.header .hamburger__bars::after {
   bottom: -12px;
 }
 @media (min-width: 1024px) and (orientation: landscape) {
-  .hero .hamburger {
+  .header .hamburger {
     display: none;
   }
 }
-.hero .hamburger.active {
+.header .hamburger.active {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.hero .hamburger.active + .hamburger {
+.header .hamburger.active + .hamburger {
   -webkit-transform: translateY(400px);
           transform: translateY(400px);
 }
-.hero .hamburger.active + aside {
+.header .hamburger.active + aside {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
 }
-.hero__info {
+.header__info {
   background-color: rgb(27, 35, 46);
   min-height: 100vh;
   display: -webkit-box;
@@ -94,7 +111,7 @@ h1, h2, h3 {
           flex-direction: column;
 }
 @media (min-width: 667px) and (orientation: landscape) {
-  .hero__info {
+  .header__info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -107,23 +124,18 @@ h1, h2, h3 {
             align-items: center;
   }
 }
-.hero__title {
+.header__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 90%;
   margin: 0 auto 0 auto;
-  text-align: center;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -131,7 +143,7 @@ h1, h2, h3 {
   padding: 20px;
 }
 @media (min-width: 720px) and (orientation: landscape) {
-  .hero__title {
+  .header__title {
     width: 70%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -139,31 +151,33 @@ h1, h2, h3 {
   }
 }
 @media (min-width: 667px) and (orientation: landscape) {
-  .hero__title {
+  .header__title {
     width: 40%;
     max-width: 800px;
     height: 100vh;
     padding: 30px;
   }
 }
-.hero__title-h1 {
+.header__title-h1 {
   font-size: clamp(2.2rem, 4vw, 3.7rem);
   color: #fff;
+  text-align: center;
 }
 @media (min-width: 2000px) and (orientation: landscape) {
-  .hero__title-h1 {
+  .header__title-h1 {
     font-size: clamp(2.2rem, 4vw, 4.5rem);
   }
 }
-.hero__title-h1 .hilight {
+.header__title-h1 .hilight {
   color: #d00;
 }
-.hero__title-p {
+.header__title-p {
   font-size: clamp(1.6rem, 1vw, 2.7rem);
   margin-top: 20px;
   color: #fff;
+  text-align: center;
 }
-.hero__photo {
+.header__photo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,7 +203,7 @@ h1, h2, h3 {
   clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
 }
 @media (min-width: 667px) and (orientation: landscape) {
-  .hero__photo {
+  .header__photo {
     width: 40%;
     height: 100vh;
     clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
@@ -235,8 +249,7 @@ aside .logo {
   margin: 20px;
 }
 aside .logo .logo-mobile {
-  width: 200px;
-  height: 200px;
+  width: 40%;
 }
 aside .navigation__menu {
   list-style: none;
@@ -282,6 +295,12 @@ aside .navigation__menu-item-dialer a {
     display: none;
   }
 }
+aside .socials {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
 
 .desktop {
   display: none;
@@ -292,7 +311,7 @@ aside .navigation__menu-item-dialer a {
       -ms-flex-align: center;
           align-items: center;
   background-color: rgb(27, 35, 46);
-  padding: 20px;
+  padding: 35px;
   position: fixed;
   top: 0;
   left: 0;
@@ -336,8 +355,7 @@ aside .navigation__menu-item-dialer a {
   font-size: clamp(1.7rem, 1.4vw, 2rem);
 }
 .desktop .logo-desktop {
-  width: 80px;
-  height: 80px;
+  width: 40%;
 }
 @media (min-width: 1024px) and (orientation: landscape) {
   .desktop {
@@ -348,7 +366,7 @@ aside .navigation__menu-item-dialer a {
 }
 
 .sticky {
-  padding: 10px;
+  padding: 25px;
   background-color: rgba(27, 35, 46, 0.85);
 }
 
@@ -366,7 +384,7 @@ aside .navigation__menu-item-dialer a {
 .boxes__main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px 10px;
+  gap: 30px 10px;
   padding: 30px 0;
   max-width: 1902px;
 }
@@ -384,6 +402,14 @@ aside .navigation__menu-item-dialer a {
   border-radius: 15px;
   border: 3px solid #d00;
   text-align: center;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.boxes__item:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 .boxes__item-heading {
   font-size: clamp(1.7rem, 1.5vw, 2.3rem);
@@ -598,7 +624,7 @@ aside .navigation__menu-item-dialer a {
   padding: 15px;
 }
 .footer__author img {
-  width: 15%;
+  width: 40%;
 }
 .footer__logo {
   display: -webkit-box;

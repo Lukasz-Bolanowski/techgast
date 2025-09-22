@@ -31,8 +31,26 @@ $white: #fff;
     }
 }
 
-.hero {
+.header {
     min-height: 100vh;
+
+    &__box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: $stickyMenu;
+        z-index: 1;
+
+        @include respond(desktop-landscape) {
+            display: none;
+        }
+
+        &-img {
+            width: 30%;
+        }
+    }
 
     & .hamburger {
         position: fixed;
@@ -112,11 +130,8 @@ $white: #fff;
     &__title {
         display: flex;
         justify-content: flex-end;
-        align-items: center;
         flex-direction: column;
-        width: 90%;
         margin: 0 auto 0 auto;
-        text-align: center;
         flex-grow: 1;
         height: 50vh;
         padding: 20px;
@@ -136,6 +151,7 @@ $white: #fff;
         &-h1 {
             font-size: $headerFontSIze;
             color: $white;
+            text-align: center;
 
             @include respond(desktop-wide) {
                 font-size: $headerFontSizeWide;
@@ -150,6 +166,7 @@ $white: #fff;
             font-size: $textFontSize;
             margin-top: 20px;
             color: #fff;
+            text-align: center;
         }
     }
 
@@ -196,8 +213,7 @@ aside {
         margin: 20px;
 
         & .logo-mobile {
-            width: 200px;
-            height: 200px;
+            width: 40%;
         }
     }
 
@@ -244,6 +260,13 @@ aside {
     @include respond(desktop-landscape) {
         display: none;
     }
+
+    & .socials {
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+        margin-bottom: 20px;
+    }
 }
 
 .desktop {
@@ -251,7 +274,7 @@ aside {
     justify-content: space-between;
     align-items: center;
     background-color: $darkColor;
-    padding: 20px;
+    padding: 35px;
     position: fixed;
     top: 0;
     left: 0;
@@ -297,8 +320,7 @@ aside {
     }
 
     & .logo-desktop {
-        width: 80px;
-        height: 80px;
+        width: 40%;
     }
 
     @include respond(desktop-landscape) {
@@ -307,6 +329,6 @@ aside {
 }
 
 .sticky {
-    padding: 10px;
+    padding: 25px;
     background-color: $stickyMenu;
 }

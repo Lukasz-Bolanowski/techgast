@@ -2,7 +2,8 @@ $headerFont: 'Roboto Condensed', sans-serif;
 $textFont: 'Lato', sans-serif;
 $headerFontSize: clamp(2.2rem, 4vw, 3.7rem);
 $headerFontSizeWide: clamp(2.2rem, 4vw, 4.5rem);
-$textFontSize: clamp(1.6rem, 1vw, 1.7rem);
+$formFontSize: clamp(1.8rem, 2.2vw, 2.8rem);
+$textFontSize: clamp(1.6rem, 1vw, 2.7rem);
 $darkColor: rgb(27, 35, 46);
 $formColor1: rgb(51, 70, 96);
 $formColor2: rgb(46, 87, 144);
@@ -93,7 +94,7 @@ $white: #fff;
             text-align: center;
             margin-bottom: 15px;
             color: $white;
-            font-size: $textFontSize;
+            font-size: $formFontSize;
         }
     }
 

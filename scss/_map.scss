@@ -2,6 +2,7 @@ $headerFont: 'Roboto Condensed', sans-serif;
 $textFont: 'Lato', sans-serif;
 $headerFontSize: clamp(2.2rem, 4vw, 3.7rem);
 $headerFontSizeWide: clamp(2.2rem, 4vw, 4.5rem);
+$textFontSize: clamp(1.6rem, 1vw, 2.7rem);
 $headerColor: #d00;
 
 @mixin respond ($breakpoint) {
@@ -29,14 +30,31 @@ $headerColor: #d00;
     align-items: center;
     flex-direction: column;
 
-    &__title {
-        font-size: $headerFontSize;
-        text-transform: uppercase;
-        color: $headerColor;
-        margin: 15px auto;
+    @include respond(desktop-landscape) {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 
-        @include respond(desktop-wide) {
-            font-size: $headerFontSizeWide;
+    &__info {
+        padding: 20px;
+
+        @include respond(desktop-landscape) {
+            width: 45%;
+        }
+
+        &-title {
+            font-size: $headerFontSize;
+            text-transform: uppercase;
+            color: $headerColor;
+
+            @include respond(desktop-wide) {
+                font-size: $headerFontSizeWide;
+            }
+        }
+
+        &-text {
+            font-size: $textFontSize;
+            margin-top: 15px;
         }
     }
 
@@ -49,8 +67,9 @@ $headerColor: #d00;
             width: 75%;
         }
 
-        @include respond(desktop) {
-            width: 50%;
+        @include respond(desktop-landscape) {
+            height: 60vh;
+            width: 45%;
         }
     }
 }
