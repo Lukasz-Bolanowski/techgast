@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Strona internetowa firmy TechGast">
+    <meta name="keywords" content="Kuchnie, wyposażenie gastronomii">
+    <meta name="author" content="Łukasz Bolanowski">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="images/TGLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <title>TechGast - profesjonalne wyposażenie gastronomii</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__box">
+            <img class="header__box-img" src="images/TGLogo.png" alt="Logo firmy">
+            <button class="hamburger">
+                <span class="hamburger__container">
+                    <span class="hamburger__bars"></span>
+                </span>
+            </button>
+        </div>
+        <aside>
+            <nav class="mobile">
+                <ul class="navigation__menu">
+                    <li class="navigation__menu-item"><a href="/">Start<span class="underline"></span></a></li>
+                    <li class="navigation__menu-item"><a href="/serwis">Serwis<span class="underline"></span></a></li>
+                    <li class="navigation__menu-item"><a href="/kontakt">Kontakt<span class="underline"></span></a></li>
+                    <li class="navigation__menu-item-dialer"><a href="tel:+48733897076">Zadzwoń teraz</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <nav class="desktop">
+            <div class="logo">
+                <img src="images/TGLogo.png" class="logo-desktop" alt="Logo TechGast" decoding="async">
+            </div>
+            <ul class="navigation__menu">
+                <li class="navigation__menu-item"><a href="/">Start<span class="underline"></span></a></li>
+                <li class="navigation__menu-item"><a href="/serwis">Serwis<span class="underline"></span></a></li>
+                <li class="navigation__menu-item"><a href="/kontakt">Kontakt<span class="underline"></span></a></li>
+                <li class="navigation__menu-item-dialer"><a href="tel:+48733897076">Zadzwoń teraz</a></li>
+            </ul>
+        </nav>
+        <article class="header__info">
+            <div class="header__info-box">
+                <h1 class="header__info-title">Masz pytania lub wątpliwości?</h1>
+                <p class="header__info-text">SKONTAKTUJ SIĘ Z NAMI</p>
+                <p class="header__info-text">Odpowiemy na nurtujące Cię pytania i dopasujemy ofertę do Twoich spersonalizowanych potrzeb</p>
+            </div>
+            <div class="header__info-wrapper">
+                <h2 class="header__info-wrapper-title">Zajmujemy się profesjonalnym wyposażeniem gastronomii</h2>
+            </div>
+        </article>
+    </header>
+    <section class="contact">
+        <article class="contact__person">
+            <div class="contact__data">
+                <h2 class="contact__data-name">mariusz przybylski</h2>
+                <p class="contact__data-position">właściciel</p>
+            </div>
+            <div class="contact__details">
+                <p class="contact__details-phone"><i class="fa-solid fa-phone"></i>513 514 508</p>
+                <p class="contact__details-email"><i class="fa-solid fa-envelope"></i>mariusz@techgast.pl</p>
+            </div>
+        </article>
+        <article class="contact__person">
+            <div class="contact__data">
+                <h2 class="contact__data-name">monika przybylska</h2>
+                <p class="contact__data-position">biuro</p>
+            </div>
+            <div class="contact__details">
+                <p class="contact__details-phone"><i class="fa-solid fa-phone"></i>513 514 508</p>
+                <p class="contact__details-email"><i class="fa-solid fa-envelope"></i>monika@techgast.pl</p>
+            </div>
+        </article>
+        <article class="contact__person">
+            <div class="contact__data">
+                <h2 class="contact__data-name">michał przybylski</h2>
+                <p class="contact__data-position">doradca</p>
+            </div>
+            <div class="contact__details">
+                <p class="contact__details-phone"><i class="fa-solid fa-phone"></i>513 514 508</p>
+                <p class="contact__details-email"><i class="fa-solid fa-envelope"></i>michał@techgast.pl</p>
+            </div>
+        </article>
+        <article class="contact__person">
+            <div class="contact__data">
+                <h2 class="contact__data-name">marian kowalski</h2>
+                <p class="contact__data-position">doradca</p>
+            </div>
+            <div class="contact__details">
+                <p class="contact__details-phone"><i class="fa-solid fa-phone"></i>513 514 508</p>
+                <p class="contact__details-email"><i class="fa-solid fa-envelope"></i>marian@techgast.pl</p>
+            </div>
+        </article>
+        <article class="contact__person">
+            <div class="contact__data">
+                <h2 class="contact__data-name">marek kowalski</h2>
+                <p class="contact__data-position">serwis</p>
+            </div>
+            <div class="contact__details">
+                <p class="contact__details-phone"><i class="fa-solid fa-phone"></i>513 514 508</p>
+                <p class="contact__details-email"><i class="fa-solid fa-envelope"></i>marek@techgast.pl</p>
+            </div>
+        </article>
+        <article class="contact__person">
+            <div class="contact__data">
+                <h2 class="contact__data-name">arek kowalski</h2>
+                <p class="contact__data-position">serwis</p>
+            </div>
+            <div class="contact__details">
+                <p class="contact__details-phone"><i class="fa-solid fa-phone"></i>513 514 508</p>
+                <p class="contact__details-email"><i class="fa-solid fa-envelope"></i>arek@techgast.pl</p>
+            </div>
+        </article>
+    </section>
+    <section class="forms">
+        <h2 class="forms__title">napisz do nas</h2>
+        <main class="forms__main">
+            <div class="forms__wrapper">
+                <article class="forms__details">
+                    <p class="forms__details-email"><i class="fa-solid fa-envelope"></i>biuro@techgast.pl</p>
+                    <p class="forms__details-adress"><i class="fa-solid fa-location-dot"></i>Piłsudskiego 17, 38-480 Rymanów, Polska</p>
+                </article>
+                <article class="forms__map">
+                    <div class="forms__map-container"></div>
+                </article>
+            </div>
+            <form class="forms__box" action="https://formsubmit.co/kontakt@newpromptai.pl" enctype="multipart/form-data" method="POST">
+                <input name="_captcha" type="hidden"value="false">
+                <input type="hidden" name="_next" value="https://lukasz-bolanowski.github.io/techgast/submitform/index.html">
+                <input name="_subject" type="hidden" value="Wiadomość z TechGast.pl">
+                <div class="forms__group">
+                    <input name="Name" id="firstName" type="name" placeholder="IMIĘ I NAZWISKO / NAZWA FIRMY" required>
+                </div>
+                <div class="forms__group">
+                    <input name="E-mail" id="email" type="email" placeholder="E-MAIL" required>
+                </div>
+                <div class="forms__group">
+                    <input name="Phone_number" id="phone_number" type="text" placeholder="NUMER TELEFONU" required>
+                </div>
+                <div class="forms__group">
+                    <textarea name="textContent" id="textContent" placeholder="TWOJA WIADOMOŚĆ"></textarea>
+                </div>
+                <button class="forms__submitform" type="submit">wyślij</button>
+            </form>
+        </main>
+    </section>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__wrapper-info">
+                <div class="footer__help">
+                    <h3 class="footer__help-header">Potrzebujesz pomocy?</h3>
+                    <p class="footer__help-details">Zadzwoń - znajdziemy rozwiązanie</p>
+                </div>
+                <div class="footer__contact">
+                    <p class="footer__contact-details"><i class="fa-solid fa-phone"></i></p>
+                    <div class="footer__contact-wrapper">
+                        <p class="footer__contact-details">693 155 269</p>
+                        <p class="footer__contact-details">790 514 508</p>
+                        <p class="footer__contact-details">513 514 508</p>
+                    </div>
+                </div>
+                <div class="footer__email">
+                    <p class="footer__email-details"><i class="fa-solid fa-envelope"></i></p>
+                    <div class="footer__email-wrapper">
+                        <p class="footer__email-details">biuro@techgast.pl</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__wrapper-details">
+                <div class="footer__logo">
+                    <img src="images/TGLogo.png" alt="Logo TechGast">
+                </div>
+                <div class="footer__socials">
+                    <div class="footer__adress">
+                        <p class="footer__adress-icon"><i class="fa-solid fa-location-dot"></i></p>
+                        <p class="footer__adress-p">Piłsudskiego 17,<br>38-480 Rymanów</p>
+                    </div>
+                    <div class="footer__icons">
+                        <p class="footer__icons-p">Znajdziesz nas też na:</p>
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__author">
+            <p class="footer__author-p">&copy; TechGast wszelkie prawa zastrzeżone</p>
+            <p class="footer__author-p">Built by &copy; NewPrompt Sp. z.o.o.</p>
+            <p class="footer__author-p">Polityka prywatności</p>
+            <p class="footer__author-p">Formularze obsługuje FormSubmit</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="hamburgerMenu.js"></script>
+    <script src="scrollTrigger.js"></script>
+    <script src="menu.js"></script>
+    <script src="activeOption.js"></script>
+    <script src="map.js"></script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+$headerFontSize: clamp(2.8rem, 4.9vw, 5rem);
+$headerFontSizeWide: clamp(2.8rem, 5.2vw, 6.3rem);
+$headerTitleFontSize: clamp(3rem, 5.7vw, 5.5rem);
+$headerTitleFontSizeWide: clamp(3.2rem, 6.3vw, 6.5rem);
+$textFontSize: clamp(1.6rem, 1vw, 2.7rem);
+$headerTextFontSize: clamp(1.7rem, 1.4vw, 3.2rem);
+$menuFontSize: clamp(1.7rem, 1.4vw, 2rem);
+$darkColor: #192a46;
+$darkColorMenu: rgb(27, 35, 46);
+$stickyMenu: rgba(27, 35, 46, 0.85);
+$headerColor: #c1a370;
+$white: #fff;
+$black: #000;
+
+@mixin respond ($breakpoint) {
+    @if ($breakpoint == tablet) {
+        @media (min-width: 768px) {@content;}
+    }
+    @if ($breakpoint == phone-landscape) {
+        @media (min-width: 667px) and (orientation: landscape) {@content;}
+    }
+    @if ($breakpoint == tablet-landscape) {
+        @media (min-width: 720px) and (orientation: landscape) {@content;}
+    }
+    @else if $breakpoint == desktop {
+        @media (min-width: 1024px) {@content;}
+    }
+    @else if ($breakpoint == desktop-landscape) {
+        @media (min-width: 1024px) and (orientation: landscape) {@content;}
+    }
+    @else if ($breakpoint == desktop-wide) {
+        @media (min-width: 2000px) and (orientation: landscape) {@content;}
+    }
+    @else if ($breakpoint == menu-landscape) {
+        @media (min-width: 667px) and (orientation: landscape) {@content;}
+    }
+}
+
+.header {
+    min-height: 100vh;
+    
+    &__box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $stickyMenu;
+        z-index: 2;
+
+        @include respond(desktop-landscape) {
+            display: none;
+        }
+
+        &-img {
+            width: 30%;
+
+            @include respond(phone-landscape) {
+                width: 15%;
+            }
+        }
+
+        &:has(.hamburger.active) + aside {
+            transform: translateX(-100%);
+        }
+    }
+
+    & .hamburger {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: transform .2s ease;
+
+        &__container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 35px;
+            height: 30px;
+        }
+
+        &__bars {
+            position: absolute;
+            width: 35px;
+            height: 2px;
+            background-color: $headerColor;
+
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 80%;
+                height: 2px;
+                background-color: $headerColor;
+            }
+
+            &::before {
+                top: -12px;
+            }
+
+            &::after {
+                bottom: -12px;
+            }
+        }
+
+        @include respond(desktop-landscape) {
+            display: none;
+        }
+
+        &.active {
+            transform: rotate(180deg);
+
+            & +.hamburger {
+                transform: translateY(400px);
+            }
+        }
+    }
+
+    &__info {
+        background-color: $darkColor;
+        min-height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px;
+        background-image: url('../images/headerimg.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+
+        @include respond(phone-landscape) {
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        @include respond(tablet-landscape) {
+            justify-content: center;
+        }
+
+        @include respond(desktop-landscape) {
+            position: relative;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 90px 50px 0 70px;
+        }
+
+        @include respond(desktop-wide) {
+            padding: 90px 50px 0 200px;
+        }
+
+        &-box {
+            background: radial-gradient(circle,rgba(23, 23, 23, 1) 0%, transparent);
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+
+            @include respond(tablet) {
+                width: 80%;
+            }
+
+            @include respond(phone-landscape) {
+                width: 70%;
+            }
+
+            @include respond(desktop-landscape) {
+                width: 50%;
+            }
+        }
+        
+        &-title {
+            font-size: $headerFontSize;
+            color: $headerColor;
+
+            @include respond(desktop-landscape) {
+                margin-bottom: 40px;
+            }
+
+            @include respond(desktop-wide) {
+                font-size: $headerFontSizeWide;
+            }
+        }
+
+        &-text {
+            margin-top: 15px;
+            color: $white;
+            font-size: $headerTextFontSize;
+            font-weight: 400;
+        }
+
+        &-wrapper {
+            width: 100%;
+
+            &-title {
+                font-size: $headerTitleFontSize;
+                font-weight: 300;
+                text-transform: uppercase;
+                color: $headerColor;
+                text-align: center;
+                width: 80%;
+                margin: 0 auto;
+                background: radial-gradient(circle,rgba(23, 23, 23, 1) 0%, transparent);
+                user-select: none;
+
+                @include respond(phone-landscape) {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    text-align: right;
+                    font-size: 2.5rem;
+                    width: 50%;
+                }
+
+                @include respond(tablet-landscape) {
+                    bottom: 0;
+                    right: 0;
+                    padding: 15px;
+                }
+
+                @include respond(desktop-landscape) {
+                    font-size: $headerTitleFontSize;
+                }
+
+                @include respond(desktop-wide) {
+                    font-size: $headerTitleFontSizeWide;
+                    bottom: 0;
+                    right: 0;
+                }       
+            }
+        }
+    }
+}
+
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 100%;
+    background-color: $darkColorMenu;
+    z-index: 1;
+    transition: transform .2s ease;
+
+    & .navigation__menu {
+        list-style: none;
+
+        &-item {
+            text-align: center;
+            margin-bottom: 20px;
+
+            & a {
+                cursor: pointer;
+                transition: color .2s ease;
+                font-size: $menuFontSize;
+                color: $white;
+                text-decoration: none;
+                position: relative;
+
+                & .underline {
+                    display: block;
+                    position: absolute;
+                    top: 120%;
+                    left: -5%;
+                    width: 0;
+                    height: 2px;
+                    background-color: $headerColor;
+                }
+
+                &:hover {
+                    color: $headerColor;
+                }
+
+                &.active {
+                    color: $headerColor;
+                    text-transform: uppercase;
+
+                    & .underline {
+                        width: 110%;
+                    }
+                }
+            }
+
+            &-dialer {
+                margin-top: 35px;
+
+                & a {
+                padding: 7px 15px;
+                background-color: $headerColor;
+                text-decoration: none;
+                border-radius: 20px;
+                color: $black;
+                font-size: $menuFontSize;
+                }
+            }
+        }
+    }
+
+    @include respond(menu-landscape) {
+        flex-direction: row;
+    }
+
+    @include respond(desktop-landscape) {
+        display: none;
+    }
+}
+
+.desktop {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $darkColorMenu;
+    padding: 35px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    transition: padding .3s ease, background-color .3s ease;
+
+    & .navigation__menu {
+        display: flex;
+        list-style: none;
+
+        &-item {
+        text-align: center;
+
+            & a {
+                margin: 20px;
+                cursor: pointer;
+                transition: color .2s ease;
+                font-size: $menuFontSize;
+                color: $white;
+                text-decoration: none;
+                position: relative;
+
+                & .underline {
+                    display: block;
+                    position: absolute;
+                    top: 120%;
+                    left: -5%;
+                    width: 0;
+                    height: 2px;
+                    background-color: $headerColor;
+                }
+
+                &:hover {
+                    color: $headerColor;
+                }
+
+                &.active {
+                    color: $headerColor;
+                    text-transform: uppercase;
+
+                    & .underline {
+                        width: 110%;
+                    }
+                }
+            }
+
+            &-dialer a {
+                padding: 7px 15px;
+                background-color: $headerColor;
+                text-decoration: none;
+                border-radius: 20px;
+                color: $black;
+                font-size: $menuFontSize;
+            }
+        }
+    }
+
+    & .logo {
+        width: 160px;
+
+        &-desktop {
+            width: 100%;
+        }
+    }
+
+    @include respond(desktop-landscape) {
+        display: flex;
+    }
+}
+
+.sticky {
+    padding: 25px;
+    background-color: $stickyMenu;
+}

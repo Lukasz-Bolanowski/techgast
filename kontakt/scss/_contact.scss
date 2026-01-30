@@ -1,0 +1,87 @@
+$headerFont: 'Roboto Condensed', sans-serif;
+$textFont: 'Lato', sans-serif;
+$headerFontSIze: clamp(2.2rem, 4vw, 3.7rem);
+$headerFontSizeWide: clamp(2.2rem, 4vw, 4.5rem);
+$textFontSize: clamp(1.6rem, 1vw, 1.7rem);
+$menuFontSize: clamp(1.7rem, 1.4vw, 2rem);
+$h2FontSize: clamp(1.5rem, 3vw, 2.8rem);
+$footerh3: clamp(2.2rem, 4vw, 3rem);
+$darkColor: #192a46;
+$headerColor: #c1a370;
+$cardBackground: #decdb2;
+$white: #fff;
+
+@mixin respond ($breakpoint) {
+    @if ($breakpoint == tablet) {
+        @media (min-width: 768px) {@content;}
+    }
+    @if ($breakpoint == tablet-landscape) {
+        @media (min-width: 720px) and (orientation: landscape) {@content;}
+    }
+    @else if $breakpoint == desktop {
+        @media (min-width: 1024px) {@content;}
+    }
+    @else if ($breakpoint == desktop-landscape) {
+        @media (min-width: 1024px) and (orientation: landscape) {@content;}
+    }
+    @else if ($breakpoint == desktop-wide) {
+        @media (min-width: 2000px) and (orientation: landscape) {@content;}
+    }
+    @else if ($breakpoint == menu-landscape) {
+        @media (min-width: 667px) and (orientation: landscape) {@content;}
+    }
+}
+
+.contact {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto;
+
+    @include respond(desktop-landscape) {
+        width: 80%;
+        padding: 50px 0;
+    }
+
+    &__person {
+        background-color: $cardBackground;
+    }
+
+    &__data {
+        text-align: center;
+        text-transform: uppercase;
+        background-color: $headerColor;
+        padding: 12px;
+
+        &-name {
+            font-weight: 700;
+        }
+    }
+
+    &__details {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 20px 0;
+
+        &-phone {
+            font-size: $textFontSize;
+            margin: 10px 0;
+
+            & .fa-phone {
+                margin-right: 10px;
+            }
+        }
+
+        &-email {
+            font-size: $textFontSize;
+            margin: 10px 0;
+
+            & .fa-envelope {
+                margin-right: 10px;
+            }
+        }
+    }
+}

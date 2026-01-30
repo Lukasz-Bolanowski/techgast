@@ -1,0 +1,170 @@
+$headerFont: 'Roboto Condensed', sans-serif;
+$textFont: 'Lato', sans-serif;
+$headerFontSize: clamp(2.2rem, 4vw, 3.7rem);
+$headerFontSizeWide: clamp(2.2rem, 4vw, 4.5rem);
+$textFontSize: clamp(1.6rem, 1vw, 2.7rem);
+$placeholderFontSize: clamp(1.2rem, 0.8vw, 2rem);
+$darkColor: rgb(27, 35, 46);
+$headerColor: #c1a370;
+$buttonHover: #9c7c46;
+$cardBackground: #decdb2;
+$white: #fff;
+$black: #000;
+
+@mixin respond ($breakpoint) {
+    @if ($breakpoint == tablet) {
+        @media (min-width: 768px) {@content;}
+    }
+    @else if $breakpoint == desktop {
+        @media (min-width: 1024px) {@content;}
+    }
+    @else if ($breakpoint == desktop-landscape) {
+        @media (min-width: 1024px) and (orientation: landscape) {@content;}
+    }
+    @else if ($breakpoint == desktop-wide) {
+        @media (min-width: 2000px) and (orientation: landscape) {@content;}
+    }
+    @else if ($breakpoint == menu-landscape) {
+        @media (min-width: 667px) and (orientation: landscape) {@content;}
+    }
+}
+
+.forms {
+    background-color: $cardBackground;
+    padding: 25px 0;
+
+    &__title {
+        font-size: $headerFontSize;
+        text-align: center;
+        color: $darkColor;
+        text-transform: uppercase;
+
+        @include respond(desktop-wide) {
+            font-size: $headerFontSizeWide;
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @include respond(desktop-landscape) {
+            width: 90%;
+            margin: 0 auto;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+
+    &__wrapper {
+        flex-basis: 50%;
+    }
+
+    &__details {
+        width: 70%;
+        margin: 0 auto;
+
+        @include respond(desktop-landscape) {
+            width: 100%;
+        }
+
+        &-email {
+            font-size: $textFontSize;
+            margin: 5px 0;
+
+            & .fa-envelope {
+                margin-right: 10px;
+            }
+        }
+
+        &-adress {
+            font-size: $textFontSize;
+            margin: 5px 0;
+
+            & .fa-location-dot {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__map {
+        margin: 15px 0;
+
+        &-container {
+            height: 40vh;
+            width: 90%;
+            margin: 0 auto;
+
+            @include respond(tablet) {
+                width: 70%;
+            }
+
+            @include respond(desktop-landscape) {
+                height: 35vh;
+                width: 100%;
+            }
+        }
+    }
+
+    &__box {
+        width: 90%;
+        margin: 0 auto;
+
+        @include respond(tablet) {
+            width: 70%;
+        }
+
+        @include respond(desktop-landscape) {
+            flex-basis: 50%;
+            padding: 20px 0 20px 20px;
+            width: 100%;
+        }
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+        & input,
+        & textarea {
+            padding: 12px;
+            margin: 5px;
+            background-color: $white;
+            font-size: $textFontSize;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input::placeholder {
+            font-size: $placeholderFontSize;
+        }
+
+        & textarea {
+            height: 100px;
+            resize: none;
+        }
+    }
+
+    &__submitform {
+        width: 100%;
+        padding: 15px 0;
+        font-size: $textFontSize;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 5px;
+        color: $black;
+        background-color: $headerColor;
+        transition: background-color .3s ease;
+
+        &:hover {
+            background-color: $buttonHover;
+        }
+
+        @include respond(desktop-landscape) {
+            cursor: pointer;
+        }
+    }
+}

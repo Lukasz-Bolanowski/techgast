@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Strona internetowa firmy TechGast">
+    <meta name="keywords" content="Kuchnie, wyposażenie gastronomii">
+    <meta name="author" content="Łukasz Bolanowski">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="images/TGLogoicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <title>TechGast - profesjonalne wyposażenie gastronomii</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__box">
+            <img class="header__box-img" src="images/TGLogo.png" alt="Logo firmy">
+            <button class="hamburger">
+                <span class="hamburger__container">
+                    <span class="hamburger__bars"></span>
+                </span>
+            </button>
+        </div>
+        <aside>
+            <nav class="mobile">
+                <ul class="navigation__menu">
+                    <li class="navigation__menu-item"><a href="/">Start<span class="underline"></span></a></li>
+                    <li class="navigation__menu-item"><a href="/serwis">Serwis<span class="underline"></span></a></li>
+                    <li class="navigation__menu-item"><a href="/kontakt">Kontakt<span class="underline"></span></a></li>
+                    <li class="navigation__menu-item-dialer"><a href="tel:+48733897076">Zadzwoń teraz</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <nav class="desktop">
+            <div class="logo">
+                <img src="images/TGLogo.png" class="logo-desktop" alt="Logo TechGast" decoding="async">
+            </div>
+            <ul class="navigation__menu">
+                <li class="navigation__menu-item"><a href="/">Start<span class="underline"></span></a></li>
+                <li class="navigation__menu-item"><a href="/serwis">Serwis<span class="underline"></span></a></li>
+                <li class="navigation__menu-item"><a href="/kontakt">Kontakt<span class="underline"></span></a></li>
+                <li class="navigation__menu-item-dialer"><a href="tel:+48733897076">Zadzwoń teraz</a></li>
+            </ul>
+        </nav>
+        <article class="header__info">
+            <div class="header__info-box">
+                <h1 class="header__info-title">Nasze usługi serwisowe</h1>
+                <p class="header__info-text">OFERUJEMY SZEROKI ZAKRES USŁUG SERWISOWYCH</p>
+                <p class="header__info-text">Dbamy o to, aby Twój sprzęt działał niezawodnie wtedy, kiedy najbardziej tego potrzebujesz</p>
+            </div>
+            <div class="header__info-wrapper">
+                <h2 class="header__info-wrapper-title">Zajmujemy się profesjonalnym wyposażeniem gastronomii</h2>
+            </div>
+        </article>
+    </header>
+    <section class="boxes">
+        <h1 class="boxes__heading">nasze usługi serwisowe</h1>
+        <main class="boxes__main">
+            <article class="boxes__item">
+                <h2 class="boxes__item-heading">Serwis urządzeń</h2>
+            </article>
+            <article class="boxes__item">
+                <h2 class="boxes__item-heading">Przeglądy okresowe</h2>
+            </article>
+            <article class="boxes__item">
+                <h2 class="boxes__item-heading">Montaż urządzeń</h2>
+            </article>
+        </main>
+    </section>
+    <section class="service">
+        <h1 class="service__heading">cennik usług serwisowych</h1>
+        <div class="service__item">
+            <div class="service__item-wrapper">
+                <p class="service__item-number">1</p>
+                <p class="service__item-p">Koszt serwisu urządzeń gastronomicznych w standardowych godzinach (8:00 - 16:00)</p>
+            </div>
+            <p class="service__item-price">190zł/h</p>
+            <span class="service__item-underline"></span>
+        </div>
+        <div class="service__item">
+            <div class="service__item-wrapper">
+                <p class="service__item-number">2</p>
+                <p class="service__item-p">Koszt serwisu urządzeń chłodniczych</p>
+            </div>
+            <p class="service__item-price">250zł/h</p>
+            <span class="service__item-underline"></span>
+        </div>
+        <div class="service__item">
+            <div class="service__item-wrapper">
+                <p class="service__item-number">3</p>
+                <p class="service__item-p">Po godzinach standardowych (po 16:00)</p>
+            </div>
+            <p class="service__item-price">+50%</p>
+        </div>
+        <div class="service__item">
+                <div class="service__item-wrapper">
+                    <p class="service__item-number-blank">4</p>
+                    <p class="service__item-p">W weekendy</p>
+                </div>
+            <p class="service__item-price">+100%</p>
+            <span class="service__item-underline"></span>
+        </div>
+        <div class="service__item">
+            <div class="service__item-wrapper">
+                <p class="service__item-number">4</p>
+                <p class="service__item-p">Dojazd (liczony w dwie strony)</p>
+            </div>
+            <p class="service__item-price">1,30/km</p>
+            <span class="service__item-underline"></span>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__wrapper-info">
+                <div class="footer__help">
+                    <h3 class="footer__help-header">Potrzebujesz pomocy?</h3>
+                    <p class="footer__help-details">Zadzwoń - znajdziemy rozwiązanie</p>
+                </div>
+                <div class="footer__contact">
+                    <p class="footer__contact-details"><i class="fa-solid fa-phone"></i></p>
+                    <div class="footer__contact-wrapper">
+                        <p class="footer__contact-details">693 155 269</p>
+                        <p class="footer__contact-details">790 514 508</p>
+                        <p class="footer__contact-details">513 514 508</p>
+                    </div>
+                </div>
+                <div class="footer__email">
+                    <p class="footer__email-details"><i class="fa-solid fa-envelope"></i></p>
+                    <div class="footer__email-wrapper">
+                        <p class="footer__email-details">biuro@techgast.pl</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__wrapper-details">
+                <div class="footer__logo">
+                    <img src="images/TGLogo.png" alt="Logo TechGast">
+                </div>
+                <div class="footer__socials">
+                    <div class="footer__adress">
+                        <p class="footer__adress-icon"><i class="fa-solid fa-location-dot"></i></p>
+                        <p class="footer__adress-p">Piłsudskiego 17,<br>38-480 Rymanów</p>
+                    </div>
+                    <div class="footer__icons">
+                        <p class="footer__icons-p">Znajdziesz nas też na:</p>
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__author">
+            <p class="footer__author-p">&copy; TechGast wszelkie prawa zastrzeżone</p>
+            <p class="footer__author-p">Built by &copy; NewPrompt Sp. z.o.o.</p>
+            <p class="footer__author-p">Polityka prywatności</p>
+            <p class="footer__author-p">Formularze obsługuje FormSubmit</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="hamburgerMenu.js"></script>
+    <script src="scrollTrigger.js"></script>
+    <script src="menu.js"></script>
+    <script src="activeOption.js"></script>
+</body>
+</html>
