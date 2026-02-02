@@ -36,18 +36,18 @@ $white: #fff;
     width: 100%;
     max-width: 2000px;
     margin: 0 auto;
+    display: grid;
+    grid-auto-rows: 1fr;;
 
     &__item {
-        min-height: 45vh;
+        display: grid;
 
         @include respond(tablet) {
-            display: grid;
             grid-template-columns: repeat(2, 1fr);
             margin: 0;
         }
 
         @include respond(tablet-landscape) {
-            display: grid;
             grid-template-columns: repeat(2, 1fr);
             margin: 0;
         }

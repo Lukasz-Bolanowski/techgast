@@ -496,20 +496,20 @@ aside .navigation__menu-item-dialer a {
   width: 100%;
   max-width: 2000px;
   margin: 0 auto;
+  display: grid;
+  grid-auto-rows: 1fr;
 }
 .gallery__item {
-  min-height: 45vh;
+  display: grid;
 }
 @media (min-width: 768px) {
   .gallery__item {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 0;
   }
 }
 @media (min-width: 720px) and (orientation: landscape) {
   .gallery__item {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 0;
   }
@@ -701,11 +701,16 @@ aside .navigation__menu-item-dialer a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 80%;
+  position: relative;
 }
 .realizations__wrapper-photo {
-  width: 80vw;
-  height: 80vw;
+  width: 85vw;
+  height: 85vw;
   max-width: 420px;
   max-height: 420px;
   background-color: #fff;
@@ -714,6 +719,8 @@ aside .navigation__menu-item-dialer a {
   background-image: url("../images/table.jpg");
   background-size: cover;
   background-position: 50% 50%;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 @media (min-width: 768px) {
   .realizations__wrapper-photo {
@@ -727,6 +734,49 @@ aside .navigation__menu-item-dialer a {
     height: 35vw;
     max-width: 550px;
     max-height: 550px;
+  }
+}
+.realizations__wrapper-arrows {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 760px;
+}
+@media (min-width: 768px) {
+  .realizations__wrapper-arrows {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 70vw;
+  }
+}
+@media (min-width: 1024px) {
+  .realizations__wrapper-arrows {
+    width: 50vw;
+  }
+}
+.realizations__wrapper-arrow {
+  padding: 12px 15px;
+  margin: 0 10px;
+  background-color: #c1a370;
+  color: #192a46;
+  border: none;
+  border-radius: 50%;
+  font-size: clamp(2.2rem, 4vw, 3.7rem);
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.realizations__wrapper-arrow:hover {
+  background-color: #9c7c46;
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .realizations__wrapper-arrow {
+    cursor: pointer;
   }
 }
 

@@ -6,6 +6,7 @@ $textFontSize: clamp(1.6rem, 1vw, 2.7rem);
 $menuFontSize: clamp(1.7rem, 1.4vw, 2rem);
 $darkColor: #192a46;
 $headerColor: #c1a370;
+$buttonHover: #9c7c46;
 $white: #fff;
 
 @mixin respond ($breakpoint) {
@@ -53,11 +54,13 @@ $white: #fff;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         height: 80%;
+        position: relative;
 
         &-photo {
-            width: 80vw;
-            height: 80vw;
+            width: 85vw;
+            height: 85vw;
             max-width: 420px;
             max-height: 420px;
             background-color: #fff;
@@ -66,6 +69,7 @@ $white: #fff;
             background-image: url('../images/table.jpg');
             background-size: cover;
             background-position: 50% 50%;
+            transition: opacity .3s ease;
 
             @include respond(tablet) {
                 width: 50vw;
@@ -77,6 +81,43 @@ $white: #fff;
                 height: 35vw;
                 max-width: 550px;
                 max-height: 550px;
+            }
+        }
+
+        &-arrows {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            max-width: 760px;
+
+            @include respond(tablet) {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 70vw;
+            }
+
+            @include respond(desktop) {
+                width: 50vw;
+            }
+        }
+
+        &-arrow {
+            padding: 12px 15px;
+            margin: 0 10px;
+            background-color: $headerColor;
+            color: $darkColor;
+            border: none;
+            border-radius: 50%;
+            font-size: $headerFontSize;
+            transition: background-color .3s ease;
+
+            &:hover {
+                background-color: $buttonHover;
+            }
+
+            @include respond(desktop-landscape) {
+                cursor: pointer;
             }
         }
     }

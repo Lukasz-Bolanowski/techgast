@@ -29,7 +29,7 @@
         <aside>
             <nav class="mobile">
                 <ul class="navigation__menu">
-                    <li class="navigation__menu-item"><a href="/">Start<span class="underline"></span></a></li>
+                    <li class="navigation__menu-item"><a class="active" href="/">Start<span class="underline"></span></a></li>
                     <li class="navigation__menu-item"><a href="/serwis">Serwis<span class="underline"></span></a></li>
                     <li class="navigation__menu-item"><a href="/kontakt">Kontakt<span class="underline"></span></a></li>
                     <li class="navigation__menu-item-dialer"><a href="tel:+48733897076">Zadzwoń teraz</a></li>
@@ -41,7 +41,7 @@
                 <img src="images/TGLogo.png" class="logo-desktop" alt="Logo TechGast" decoding="async">
             </div>
             <ul class="navigation__menu">
-                <li class="navigation__menu-item"><a href="/">Start<span class="underline"></span></a></li>
+                <li class="navigation__menu-item"><a class="active" href="/">Start<span class="underline"></span></a></li>
                 <li class="navigation__menu-item"><a href="/serwis">Serwis<span class="underline"></span></a></li>
                 <li class="navigation__menu-item"><a href="/kontakt">Kontakt<span class="underline"></span></a></li>
                 <li class="navigation__menu-item-dialer"><a href="tel:+48733897076">Zadzwoń teraz</a></li>
@@ -90,7 +90,7 @@
                 <h2 class="gallery__item-header-right">Serwis urządzeń gastronomicznych</h2>
                 <p class="gallery__item-p-right">Świadczymy kompleksowe usługi serwisowe urządzeń gastronomicznych, zapewniając sprawne działanie sprzętu w każdej kuchni. Gwarantujemy fachową obsługę, terminowość i wysoką jakość wykonywanych usług.</p>
                 <div class="gallery__item-button">
-                    <a href="#"><i class="fa-solid fa-arrow-right"></i>kontakt</a>
+                    <a href="#"><i class="fa-solid fa-arrow-right"></i>serwis</a>
                 </div>
             </div>
         </article>
@@ -120,6 +120,10 @@
             <h1 class="realizations__header"><span class="realizations__header-gold">nasze</span> realizacje</h1>
         <div class="realizations__wrapper">
             <div class="realizations__wrapper-photo"></div>
+            <div class="realizations__wrapper-arrows">
+                <button class="realizations__wrapper-arrow realizations__wrapper-arrow-left"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="realizations__wrapper-arrow realizations__wrapper-arrow-right"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
         </div>
     </section>
     <footer class="footer">
@@ -176,6 +180,7 @@
     <script src="menu.js"></script>
     <script src="scrollSlider.js"></script>
     <script src="activeOption.js"></script>
+    <script src="handleSlider.js"></script>
     <script src="scrollTrigger.js"></script>
 </body>
 </html>

@@ -1,5 +1,3 @@
-$headerFont: 'Roboto Condensed', sans-serif;
-$textFont: 'Lato', sans-serif;
 $headerFontSize: clamp(2.2rem, 4vw, 3.7rem);
 $headerFontSizeWide: clamp(2.2rem, 4vw, 4.5rem);
 $textFontSize: clamp(1.6rem, 1vw, 2.7rem);
@@ -60,6 +58,9 @@ $black: #000;
 
     &__wrapper {
         flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     &__details {
@@ -90,7 +91,7 @@ $black: #000;
     }
 
     &__map {
-        margin: 15px 0;
+        margin: 15px 0 0 0;
 
         &-container {
             height: 40vh;
@@ -102,7 +103,7 @@ $black: #000;
             }
 
             @include respond(desktop-landscape) {
-                height: 35vh;
+                height: 45vh;
                 width: 100%;
             }
         }
@@ -111,6 +112,7 @@ $black: #000;
     &__box {
         width: 90%;
         margin: 0 auto;
+        padding: 20px 0 0 0;
 
         @include respond(tablet) {
             width: 70%;
@@ -118,7 +120,7 @@ $black: #000;
 
         @include respond(desktop-landscape) {
             flex-basis: 50%;
-            padding: 20px 0 20px 20px;
+            padding: 20px 0 0 20px;
             width: 100%;
         }
     }
@@ -133,7 +135,8 @@ $black: #000;
             padding: 12px;
             margin: 5px;
             background-color: $white;
-            font-size: $textFontSize;
+            font-size: $placeholderFontSize;
+            font-family: 'Raleway', sans-serif;
             border: none;
             border-radius: 5px;
         }
