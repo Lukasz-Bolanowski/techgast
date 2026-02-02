@@ -45,7 +45,6 @@ $black: #000;
 
     &__track {
         display: flex;
-        width: max-content;
         animation: scrollSlider 20s linear infinite;
         --translate: 0px;
         --duration: 20s;
@@ -55,10 +54,21 @@ $black: #000;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: fit-content;
+            margin: 0 20px;
+            width: auto;
+            max-width: 120px;
+
+            @include respond(tablet) {
+                max-width: 150px;
+            }
+
+            @include respond(desktop) {
+                max-width: 200px;
+                margin: 0 40px;
+            }
 
             & img {
-                width: 50%;;
+                width: 100%;;
                 object-fit: contain;
             }
         }

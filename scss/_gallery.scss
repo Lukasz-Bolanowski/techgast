@@ -37,10 +37,10 @@ $white: #fff;
     max-width: 2000px;
     margin: 0 auto;
     display: grid;
-    grid-auto-rows: 1fr;;
 
     &__item {
         display: grid;
+        grid-auto-rows: minmax(50vh, auto);
 
         @include respond(tablet) {
             grid-template-columns: repeat(2, 1fr);
@@ -50,6 +50,10 @@ $white: #fff;
         @include respond(tablet-landscape) {
             grid-template-columns: repeat(2, 1fr);
             margin: 0;
+        }
+
+        @include respond(desktop-landscape) {
+            grid-auto-rows: 60vh;
         }
 
         &-photo {
@@ -73,7 +77,11 @@ $white: #fff;
 
             @include respond(tablet-landscape) {
                 grid-column: 1/2;
-                height: 100%;
+                height: auto;
+            }
+
+            @include respond(desktop-landscape) {
+                height: 60vh;
             }
 
             &-right {
@@ -98,6 +106,10 @@ $white: #fff;
                 @include respond(tablet-landscape) {
                     grid-column: 2/3;
                     height: 100%;
+                }
+
+                @include respond(desktop-landscape) {
+                    height: 60vh;
                 }
             }
         }

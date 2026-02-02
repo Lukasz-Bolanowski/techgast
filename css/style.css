@@ -440,9 +440,6 @@ aside .navigation__menu-item-dialer a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   -webkit-animation: scrollSlider 20s linear infinite;
           animation: scrollSlider 20s linear infinite;
   --translate: 0px;
@@ -461,12 +458,23 @@ aside .navigation__menu-item-dialer a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  margin: 0 20px;
+  width: auto;
+  max-width: 120px;
+}
+@media (min-width: 768px) {
+  .slider__track-logo {
+    max-width: 150px;
+  }
+}
+@media (min-width: 1024px) {
+  .slider__track-logo {
+    max-width: 200px;
+    margin: 0 40px;
+  }
 }
 .slider__track-logo img {
-  width: 50%;
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -497,10 +505,10 @@ aside .navigation__menu-item-dialer a {
   max-width: 2000px;
   margin: 0 auto;
   display: grid;
-  grid-auto-rows: 1fr;
 }
 .gallery__item {
   display: grid;
+  grid-auto-rows: minmax(50vh, auto);
 }
 @media (min-width: 768px) {
   .gallery__item {
@@ -512,6 +520,11 @@ aside .navigation__menu-item-dialer a {
   .gallery__item {
     grid-template-columns: repeat(2, 1fr);
     margin: 0;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .gallery__item {
+    grid-auto-rows: 60vh;
   }
 }
 .gallery__item-photo {
@@ -535,7 +548,12 @@ aside .navigation__menu-item-dialer a {
 @media (min-width: 720px) and (orientation: landscape) {
   .gallery__item-photo {
     grid-column: 1/2;
-    height: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .gallery__item-photo {
+    height: 60vh;
   }
 }
 .gallery__item-photo-right {
@@ -560,6 +578,11 @@ aside .navigation__menu-item-dialer a {
   .gallery__item-photo-right {
     grid-column: 2/3;
     height: 100%;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .gallery__item-photo-right {
+    height: 60vh;
   }
 }
 .gallery__item-text {
